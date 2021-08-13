@@ -1,14 +1,14 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-12T21:04:59.100Z
+__export_date: 2021-08-13T18:31:47.382Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_4e64adc404a74514a4f53a5c1b3af57e
     parentId: fld_789e6a04ca7d411ba21377811c9086d2
-    modified: 1628716189207
+    modified: 1628858342669
     created: 1628515302830
     url: "{{ _.BASE_PATH }}/enviouCliente"
-    name: List
+    name: Consultar Clientes
     description: |-
       ## 🧔👧👵👦 Lista os clientes do ecommerce
 
@@ -82,10 +82,10 @@ resources:
     _type: workspace
   - _id: req_6a7c968e61464e8f8bba945a146efced
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1628716197070
+    modified: 1628858315374
     created: 1628515302578
     url: "{{ _.PATH }}"
-    name: Create - Movimentação Estoque
+    name: Adicionar Movimentação Estoque
     description: >-
       ## 📦🔁 Cria uma movimentação de estoque para o produto informado
 
@@ -207,10 +207,10 @@ resources:
     _type: request_group
   - _id: req_69c2c6531b564945997a096ed4613788
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1628716203357
+    modified: 1628858322590
     created: 1628515302592
     url: "{{ _.BASE_PATH }}/listEstoque"
-    name: List - Produtos do Estoque
+    name: Consultar Produtos do Estoque
     description: >-
       ## 📦🔁 Lista produtos do estoque
 
@@ -278,10 +278,10 @@ resources:
     _type: request
   - _id: req_3701408dcdab4e2cb92abaa4f0d173db
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1628716209025
+    modified: 1628858331181
     created: 1628515302595
     url: "{{ _.BASE_PATH }}/listMovimentacaoEstoque"
-    name: List - Movimentações de Estoque
+    name: Consultar Movimentações de Estoque
     description: |-
       ## 📦🔁 Lista movimentações de estoque
 
@@ -357,10 +357,10 @@ resources:
     _type: request
   - _id: req_f189383886674009b79848a998995f92
     parentId: fld_0735e64ed3db4c06a15528f734aeacea
-    modified: 1628716181183
+    modified: 1628858300847
     created: 1628515302849
     url: "{{ _.BASE_PATH }}/listFechamentoMagazord"
-    name: List Fechamentos Magazord
+    name: Consultar Fechamentos Magazord
     description: "## ❌ Este endpoint não funciona. ❌"
     method: GET
     body: {}
@@ -403,10 +403,10 @@ resources:
     _type: request_group
   - _id: req_377fc7e148bb4131942f5de3415ec41d
     parentId: fld_0735e64ed3db4c06a15528f734aeacea
-    modified: 1628716174710
+    modified: 1628858307102
     created: 1628515302843
     url: "{{ _.BASE_PATH }}/fechamentoMagazord"
-    name: View Fechamento MagaZord
+    name: Visualizar Fechamento MagaZord
     description: |-
       ## Consulta o fechamento MagaZord do mês/ano informado.
 
@@ -453,10 +453,10 @@ resources:
     _type: request
   - _id: req_0a1b3c79370f4e0aa07645252c6850d8
     parentId: fld_127bf138948f4979a7ef67ec7831304d
-    modified: 1628716228192
+    modified: 1628858375052
     created: 1628515302837
     url: "{{ _.PATH }}"
-    name: Create
+    name: Adicionar Mensagem
     description: >-
       ## 📤 Permite adicionar uma mensagem que será disparada para todos os
       usuários informados nos destinatários ou de acordo com o tipo de usuário.
@@ -575,10 +575,10 @@ resources:
     _type: request_group
   - _id: req_51fff7b917cc419d93cae2d3e280ecd8
     parentId: fld_867929e6cc5448919de7b4516ef65230
-    modified: 1628716235583
+    modified: 1628858400500
     created: 1628515302823
     url: "{{ _.BASE_PATH }}/enviouNewsletter"
-    name: List
+    name: Consultar Pessoas da Newsletter
     description: |-
       ## ✉🧑 Lista os usuários cadastrados na newsletter
 
@@ -626,10 +626,10 @@ resources:
     _type: request_group
   - _id: req_90ab4f939599408db00374e56e69c5d1
     parentId: fld_f5fa6a1dc704488c9d8ed7d3817053d5
-    modified: 1628716243690
+    modified: 1628858408931
     created: 1628515302808
     url: "{{ _.PATH }}"
-    name: Create
+    name: Adicionar Nota Fiscal
     description: >-
       ## 📄👮‍♂️ Permite adicionar uma NFe.
 
@@ -903,10 +903,10 @@ resources:
     _type: request_group
   - _id: req_573a887fb1a9437b831f9fac198f5875
     parentId: fld_f5fa6a1dc704488c9d8ed7d3817053d5
-    modified: 1628716564586
+    modified: 1628858414403
     created: 1628515302811
     url: "{{ _.PATH }}/{% prompt 'Número', 'Número', '123123', '', false, true %}"
-    name: View
+    name: Visualizar Nota Fiscal
     description: |-
       ## 📄👮‍♂️ Mostra a situação de uma nota fiscal pelo número da nota.
 
@@ -940,10 +940,10 @@ resources:
     _type: request
   - _id: req_a265bd98c9b14001ab4659e21069c4d0
     parentId: fld_604da03866f6496086f8cceed583752f
-    modified: 1628716457082
+    modified: 1628858421899
     created: 1628515302603
     url: "{{ _.BASE_PATH }}/listPreco"
-    name: Consulta de Preços
+    name: Consultar Preços
     description: >-
       ## 💲📖📦 Mostra os preços dos produtos de uma determinada tabela de
       preço.
@@ -1033,10 +1033,10 @@ resources:
     _type: request_group
   - _id: req_61d98bef5a584a3bb3a8881967644133
     parentId: fld_604da03866f6496086f8cceed583752f
-    modified: 1628716257525
+    modified: 1628858436875
     created: 1628515302607
     url: "{{ _.PATH }}"
-    name: Atualizar Preço
+    name: Editar Preço
     description: >-
       ## 💱 Permite alterar o preço de um produto derivação.
 
@@ -1121,10 +1121,10 @@ resources:
     _type: request
   - _id: req_41b0f496824c432c8728e6a52dd6bd13
     parentId: fld_d1b13aa14b004306b1debdb1acbce937
-    modified: 1628716264720
+    modified: 1628858445914
     created: 1628515302817
     url: "{{ _.BASE_PATH }}/statusJob"
-    name: List
+    name: Consultar Dados do Sistema
     description: |-
       ## Lista vários status do sistema
 
@@ -1288,6 +1288,48 @@ resources:
       "&":
         - VERSION
     metaSortKey: -1627927112605
+    _type: request_group
+  - _id: req_bf3a956112da444eb1ce16d2321c035e
+    parentId: fld_f7c3ccd69c314362856cb5c11c19684e
+    modified: 1628876988274
+    created: 1628876723769
+    url: "{{ _.PATH }}/sync/1"
+    name: Sync
+    description: >-
+      ## Sincroniza (atualiza) a tabela de abrangência informada.
+
+
+      ### Não permite atualizar a tabela do DNE. (Se informado como parâmetro da url)
+    method: POST
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_0c4a23ab56d2411895fd0fe4582a14e9
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1628876723769
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f7c3ccd69c314362856cb5c11c19684e
+    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
+    modified: 1628876736729
+    created: 1628876696664
+    name: Abrangência
+    description: ""
+    environment:
+      resource: abrangencia
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1627999558935
     _type: request_group
   - _id: req_e7cffea57c904c24a1dd3b307e8959c0
     parentId: fld_fb6392b38d074534b2dcfde43075745f
@@ -1520,15 +1562,52 @@ resources:
     _type: request
   - _id: req_fc1cb57392bd49d4bfc4377335a843fa
     parentId: fld_8e7d334da83e441fa92b81af57c70128
-    modified: 1628515302766
+    modified: 1628878029084
     created: 1628515302766
-    url: ""
-    name: /
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Lojas
+    description: |-
+      ## 🔍
+
+      ### Observações:
+
+      1. Não possui filtros;
+      2. Ordenado pelo nome em ordem crescente;
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+       "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 1,
+              "codigo": 1,
+              "nome": "Casa Ferrari"
+            },
+          ]
+          "page_count": 9,
+          "page": 1,
+          "limit": 100,
+          "total": 9,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
     method: GET
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_f9c3f8e6e70d43a399fc34616d493068
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+        disabled: true
+      - id: pair_e82d917cd44b4c56a81eaad165cb64ee
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
     metaSortKey: -1627928972503
     isPrivate: false
@@ -1541,27 +1620,140 @@ resources:
     _type: request
   - _id: fld_8e7d334da83e441fa92b81af57c70128
     parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
-    modified: 1628515302764
+    modified: 1628877085210
     created: 1628515302764
     name: Loja
     description: ""
-    environment: {}
-    environmentPropertyOrder: null
+    environment:
+      resource1: loja
+    environmentPropertyOrder:
+      "&":
+        - resource1
     metaSortKey: -1627929130272
     _type: request_group
-  - _id: req_a92f746187d64be5a542c3f7d8b8e50f
+  - _id: req_5498084f46164634bd4c0639198a20a0
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302742
-    created: 1628515302742
-    url: ""
-    name: List
-    description: ""
-    method: GET
-    body: {}
+    modified: 1628879480761
+    created: 1628515302747
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Adicionar Painel
+    description: |-
+      ### Esquema de validação do JSON de envio: 
+
+      ```json
+      {
+        "title": "Painel",
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "description": "Nome do painel"
+          },
+          "indicadores": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/painelIndicador"
+                }
+              ]
+            }
+          }
+        },
+        "definitions": {
+          "painelIndicador": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "FK de painel_indicador"
+              },
+              "indicador": {
+                "type": "object",
+                "oneOf": {
+                    "$ref": "#/definitions/indicador"
+                  }
+              },
+              "configs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": [
+                    {
+                      "$ref": "#/definitions/indicador-config"
+                    }
+                  ]
+                }
+              },
+              "filtros": {
+                  "type": "object"
+              }
+            },
+            "required": ["id", "indicador", "configs"],
+            "additionalProperties": false
+          },
+          "indicador": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "description": "ID do indicador"
+              }
+            },
+            "required": ["id"]
+          },
+          "indicador-config": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "integer",
+                "description": "Largura do indicador",
+                "default": 250
+              },
+              "height": {
+                "type": "integer",
+                "description": "Altura do indicador",
+                "default": 250
+              },
+              "posX": {
+                "type": "integer",
+                "description": "Posição X do indicador",
+                "default": 0
+              },
+              "posY": {
+                "type": "integer",
+                "description": "Posição Y do indicador",
+                "default": 0
+              },
+              "breakpoint": {
+                "type": "string",
+                "description": "Breakpoint principal do indicador",
+                "default": "xl"
+              }
+            },
+            "required": ["width", "height", "posX", "posY", "breakpoint"]
+          }
+        },
+        "required": ["nome","indicadores"]
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
     parameters: []
-    headers: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_116a610c3f694d7fadabeff38f25cfa8
+      - id: pair_d96cb459f28c40c1bb9652a66b3a223a
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
-    metaSortKey: -1627929004387
+    metaSortKey: -1627929004437
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1572,27 +1764,147 @@ resources:
     _type: request
   - _id: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
     parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
-    modified: 1628515302738
+    modified: 1628878070996
     created: 1628515302738
     name: Painel
     description: ""
-    environment: {}
-    environmentPropertyOrder: null
+    environment:
+      resource1: painel
+    environmentPropertyOrder:
+      "&":
+        - resource1
     metaSortKey: -1627928995082
     _type: request_group
-  - _id: req_5498084f46164634bd4c0639198a20a0
+  - _id: req_a92f746187d64be5a542c3f7d8b8e50f
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302747
-    created: 1628515302747
-    url: ""
-    name: /
-    description: ""
-    method: POST
+    modified: 1628879122372
+    created: 1628515302742
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Paineis
+    description: |-
+      ## Retorna os paineis do usuário da autenticação.
+
+      * Mostra todos para usuários do tipo administrador.
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 26,
+              "tipo": 2,
+              "nome": "Painelito de Charts",
+              "indicadores": [
+                {
+                  "id": "b47ac121-eff6-483d-a70c-35c6f3956bcd",
+                  "indicador": {
+                    "id": 42,
+                    "configs": {
+                      "filtro": [],
+                      "layouts": []
+                    }
+                  },
+                  "configs": [
+                    {
+                      "posX": 0,
+                      "posY": 0,
+                      "width": 10,
+                      "height": 5,
+                      "breakpoint": "xl"
+                    },
+                    {
+                      "posX": 0,
+                      "posY": 0,
+                      "width": 12,
+                      "height": 3,
+                      "breakpoint": "lg"
+                    },
+                    {
+                      "posX": 0,
+                      "posY": 0,
+                      "width": 12,
+                      "height": 3,
+                      "breakpoint": "md"
+                    },
+                    {
+                      "posX": 0,
+                      "posY": 0,
+                      "width": 12,
+                      "height": 3,
+                      "breakpoint": "sm"
+                    },
+                    {
+                      "posX": 0,
+                      "posY": 0,
+                      "width": 12,
+                      "height": 2,
+                      "breakpoint": "xs"
+                    }
+                  ],
+                  "filtros": {}
+                }
+              ],
+              "dataCadastro": "2021-07-15T14:10:38-03:00",
+              "usuario": {
+                "id": 27530,
+                "pessoa": {
+                  "id": 148586,
+                  "tipo": 1,
+                  "nome": "Ian",
+                  "email": "ian@emplesa.com.br",
+                  "tipoUso": 1,
+                  "pessoaContato": null
+                },
+                "tipo": 1
+              }
+            },
+          ],
+          "page_count": 7,
+          "page": 1,
+          "limit": "10",
+          "total": 7,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
     body: {}
-    parameters: []
-    headers: []
+    parameters:
+      - id: pair_492eefb847624c7abfb05fcfcb018440
+        name: limit
+        value: "10"
+        description: "Max: 100"
+      - id: pair_9f4998de78b04509aa23874360f9b5f7
+        name: page
+        value: ""
+        description: ""
+        disabled: true
+      - id: pair_9ff2f9291146448aa1f99954379578e6
+        name: order
+        value: ""
+        description: id | nome
+        disabled: true
+      - id: pair_95acf7187aea4e08b1da314291050a1f
+        name: orderDirection
+        value: ""
+        description: asc | desc
+        disabled: true
+      - id: pair_8ac7161fe7984bd9adec12e69d3d1879
+        name: name
+        value: ""
+        description: Nome do painel
+        disabled: true
+    headers:
+      - id: pair_e967d71a7b44468a9465847386f7e631
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
-    metaSortKey: -1627929004312
+    metaSortKey: -1627929004387
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1603,17 +1915,106 @@ resources:
     _type: request
   - _id: req_953923b7a1204d02812a1a40251756fa
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302744
+    modified: 1628879406050
     created: 1628515302744
-    url: ""
-    name: /:id
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.dashboard['primeiro-painel'] }}"
+    name: Visualizar Painel
+    description: >-
+      ## Visualizar o painel do usuário da autentiação
+
+
+      * Usuarios administradores master podem ver qualquer id informado que exista.
+
+
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": {
+          "id": 26,
+          "tipo": 2,
+          "nome": "Painelito de Charts",
+          "indicadores": [
+            {
+              "id": "b47ac121-eff6-483d-a70c-35c6f3956bcd",
+              "indicador": {
+                "id": 42,
+                "configs": {
+                  "filtro": [],
+                  "layouts": []
+                }
+              },
+              "configs": [
+                {
+                  "posX": 0,
+                  "posY": 0,
+                  "width": 10,
+                  "height": 5,
+                  "breakpoint": "xl"
+                },
+                {
+                  "posX": 0,
+                  "posY": 0,
+                  "width": 12,
+                  "height": 3,
+                  "breakpoint": "lg"
+                },
+                {
+                  "posX": 0,
+                  "posY": 0,
+                  "width": 12,
+                  "height": 3,
+                  "breakpoint": "md"
+                },
+                {
+                  "posX": 0,
+                  "posY": 0,
+                  "width": 12,
+                  "height": 3,
+                  "breakpoint": "sm"
+                },
+                {
+                  "posX": 0,
+                  "posY": 0,
+                  "width": 12,
+                  "height": 2,
+                  "breakpoint": "xs"
+                }
+              ],
+              "filtros": {}
+            }
+          ],
+          "dataCadastro": "2021-07-15T14:10:38-03:00",
+          "usuario": {
+            "id": 27530,
+            "pessoa": {
+              "id": 148586,
+              "tipo": 1,
+              "nome": "Ian",
+              "email": "ian@emplesa.com.br",
+              "tipoUso": 1,
+              "pessoaContato": null
+            },
+            "tipo": 1
+          }
+        }
+      }
+
+      ```
     method: GET
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_8aea6b88d0aa46f7bce2e320984fba49
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
-    metaSortKey: -1627929004299.5
+    metaSortKey: -1627929004349.5
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1706,23 +2107,235 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_84b309b4cb124856ba4fb69326fb7628
+  - _id: req_84eef3dc39fe4c3c98e7c404be80a441
     parentId: fld_167ab2be58b04fc8bb25fa49b7e61766
-    modified: 1628717498140
-    created: 1628712112650
-    url: "{{ _.PATH }}/{{ _.resource1 }}/123123"
-    name: View Nota Fiscal
-    description: ""
-    method: GET
-    body: {}
+    modified: 1628863388661
+    created: 1628712169815
+    url: "{{ _.PATH }}/{{ _.resource1 }}"
+    name: Adicionar Nota Fiscal
+    description: >-
+      ## ➕📃👮‍♂️
+
+
+      ### Esquema de validação do JSON de envio:
+
+
+      ```json
+
+      {
+          "title": "Nota Fiscal",
+          "type": "object",
+          "properties": {
+              "serie": {
+                  "type": "number",
+                  "description": "Série da Nota Fiscal"
+              },
+              "tipo": {
+                  "type": "number",
+                  "enum": [0, 1]
+              },
+              "cfop": {
+                  "description": "Código da CFOP",
+                  "type": "integer"
+              },
+              "cfop-configuracao": {
+                  "description": "Código da Configuração da CFOP",
+                  "type": "integer"
+              },
+              "forma-pagamento": {
+                  "description": "Forma de Pagamento",
+                  "type": "integer"
+              },
+              "condicao-pagamento": {
+                  "description": "Condição de Pagamento",
+                  "type": "integer"
+              },
+              "observacao-fisco": {
+                  "description": "Observação reservado ao Fisco",
+                  "type": "string"
+              },
+              "observacao-contribuinte": {
+                  "description": "Observação reservado ao Contribuinte",
+                  "type": "string"
+              },
+              "frete": {
+                  "description": "Informações de Frete",
+                  "type": "object",
+                  "oneOf": [{"$ref": "#/definitions/frete"}]
+              },
+              "emissor": {
+                  "description": "Informações do Emissor",
+                  "type": "object",
+                  "oneOf": [{"$ref": "#/definitions/emissor"}]
+              },
+              "destinatario": {
+                  "description": "Informações do Destinatário",
+                  "type": "object",
+                  "oneOf": [{"$ref": "#/definitions/destinatario"}]
+              },
+              "itens": {
+                  "type": "array",
+                  "items": {
+                      "title": "Produto",
+                      "type": "object",
+                      "properties": {
+                          "quantidade": {
+                              "type": "number",
+                              "description": "Quantidade"
+                          },
+                          "valor-unitario": {
+                              "type": "number",
+                              "description": "Valor Unitário"
+                          },
+                          "valor-frete": {
+                              "type": "number",
+                              "description": "Valor Frete"
+                          },
+                          "codigo-produto": {
+                              "type": "string",
+                              "description": "Código Produto"
+                          },
+                          "descricao": {
+                              "type": "string",
+                              "description": "Descrição"
+                          },
+                          "cfop-codigo": {
+                              "type": "number",
+                              "description": "Código do CFOP"
+                          },
+                          "cfop-configuracao": {
+                              "type": "number",
+                              "description": "Código da Configuração da CFOP"
+                          },
+                          "ncm-codigo": {
+                              "type": "number",
+                              "description": "Código NCM"
+                          },
+                          "cest-codigo": {
+                              "type": "number",
+                              "description": "Código CEST"
+                          },
+                          "tipo": {
+                              "type": "number",
+                              "description": "Tipo de Item",
+                              "enum": [1, 2]
+                          },
+                          "tipo-servico": {
+                              "type": "number",
+                              "description": "Tipo do Serviço"
+                          }
+                      },
+                      "required": ["quantidade", "valor-unitario", "valor-frete", "tipo"]
+                  }
+              }
+          },
+          "definitions": {
+              "frete": {
+                  "properties": {
+                      "valor-frete": {
+                          "type": "number",
+                          "description": "Valor Total do Frete"
+                      },
+                      "transportadora": {
+                          "type": "number",
+                          "description": "Código da Transportadora"
+                      },
+                      "servico-transportadora": {
+                          "type": "number",
+                          "description": "Código do Serviço Transportadora"
+                      },
+                      "agencia-transportadora": {
+                          "type": "number",
+                          "description": "Código da Agência da Transportadora"
+                      },
+                      "modalidade-frete": {
+                          "type": "number",
+                          "description": "Modalidade de Frete",
+                          "enum": [0, 1, 2, 9]
+                      }
+                  },
+                  "required": ["valor-frete", "modalidade-frete"],
+                  "additionalProperties": false
+              },
+              "emissor": {
+                  "properties": {
+                      "cnpj": {
+                          "type": "string",
+                          "description": "CNPJ"
+                      }
+                  },
+                  "required": ["cnpj"]
+              },
+              "destinatario": {
+                  "properties": {
+                      "cpf-cnpj": {
+                          "type": "string",
+                          "description": "CPF-CNPJ"
+                      },
+                      "endereco": {
+                          "description": "Endereço do Destinatário",
+                          "type": "object",
+                          "oneOf": [{"$ref": "#/definitions/destinatario-endereco"}]
+                      }
+                  },
+                  "required": ["cpf-cnpj"]
+              },
+              "destinatario-endereco": {
+                  "properties": {
+                      "nome-destinatario": {
+                          "type": "string",
+                          "description": "Nome do Destinatário"
+                      },
+                      "codigo-ibge-cidade": {
+                          "type": "number",
+                          "description": "Código IBGE da cidade"
+                      },
+                      "cep": {
+                          "type": "number",
+                          "description": "CEP"
+                      },
+                      "logradouro": {
+                          "type": "string",
+                          "description": "Endereço"
+                      },
+                      "numero": {
+                          "type": "string",
+                          "description": "Número"
+                      },
+                      "bairro": {
+                          "type": "string",
+                          "description": "Bairro"
+                      },
+                      "complemento": {
+                          "type": "string",
+                          "description": "Complemento"
+                      }
+                  }
+              }
+              , "required": ["nome-destinatario", "cep", "logradouro", "numero", "bairro"]
+          },
+          "required": ["serie", "tipo", "emissor", "itens"]
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	
+        }
     parameters: []
     headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5154fc85493f43db82155e570580dbe0
       - id: pair_1ad97e8104b4427aaa29739f43a0f931
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627674687653
+    metaSortKey: -1627674687703
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1757,31 +2370,45 @@ resources:
         - resource
     metaSortKey: -1627928019189.5
     _type: request_group
-  - _id: req_84eef3dc39fe4c3c98e7c404be80a441
+  - _id: req_84b309b4cb124856ba4fb69326fb7628
     parentId: fld_167ab2be58b04fc8bb25fa49b7e61766
-    modified: 1628717523921
-    created: 1628712169815
-    url: "{{ _.PATH }}/{{ _.resource1 }}"
-    name: Create Nota Fiscal
-    description: ""
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	
+    modified: 1628862933130
+    created: 1628712112650
+    url: "{{ _.PATH }}/{{ _.resource1 }}/123123"
+    name: Visualizar Nota Fiscal
+    description: |-
+      ## 🔍📃👮‍♂️
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "situacao": 3,
+          "numero": 11114,
+          "serie": "1",
+          "chave": "42190223204350000170550010000801141001231298",
+          "valorTotal": "89.90",
+          "descricaoSituacao": "Autorizada",
+          "dataEmissao": "2019-02-22T13:32:59-03:00",
+          "pedidoCodigo": "0011902005210",
+          "pedidoId": 78809,
+          "tipo": 1,
+          "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?></xml>"
         }
+      }
+      ```
+    method: GET
+    body: {}
     parameters: []
     headers:
-      - name: Content-Type
-        value: application/json
-        id: pair_5154fc85493f43db82155e570580dbe0
       - id: pair_1ad97e8104b4427aaa29739f43a0f931
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627674529682.5
+    metaSortKey: -1627674687653
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1792,17 +2419,40 @@ resources:
     _type: request
   - _id: req_0cfe399828f14f4d954903f037a447e8
     parentId: fld_3c08ab2acdf7470ea94f8fab5075457b
-    modified: 1628717535992
+    modified: 1628863363879
     created: 1628515302668
-    url: "{{ _.PATH }}/{{ _.resource1 }}/3"
-    name: Consultar Folha de Vendas pelo ID
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/100"
+    name: Visualizar Folha de Vendas
+    description: |-
+      ## 🔍
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "id": 100,
+          "dataHora": "2018-06-07T14:02:48-03:00",
+          "pedidos": [
+            {
+              "pedido": "0011806000036",
+              "pedidoRastreio": "13968"
+            },
+            {
+              "pedido": "0011806000344",
+              "pedidoRastreio": "14480"
+            }
+          ]
+        }
+      }
+      ```
     method: GET
     body: {}
     parameters: []
     headers:
       - id: pair_1ad97e8104b4427aaa29739f43a0f931
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -1827,6 +2477,167 @@ resources:
       "&":
         - resource1
     metaSortKey: -1628097473269
+    _type: request_group
+  - _id: req_322de5bed4dd4292b847ac0074fb60b4
+    parentId: fld_973963dbfc6a45f28b5de48b05b377e7
+    modified: 1628876663617
+    created: 1628863861862
+    url: "{{ _.PATH }}/{{ _.resource1 }}/callback/1/notification"
+    name: Adicionar Notificação Loja
+    description: >-
+      ### É possível gerar uma notificação sem passar nada para o corpo da
+      mensagem 🤷‍♂️
+
+
+      ### Resource Types
+
+
+      1. moderationProduct
+
+      2. Order
+
+      3. changePayment
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"resourceType": "",
+        	"date": "",
+        	"resourceId": "",
+        	"seller": "",
+        	"account": ""
+        }
+    parameters: []
+    headers:
+      - id: pair_2b2003bec2c04a61a006e6c28f9d64e8
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+        id: pair_dac9f846412543f08fdf01eb000041d5
+    authentication: {}
+    metaSortKey: -1628863861862
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_973963dbfc6a45f28b5de48b05b377e7
+    parentId: fld_a6ccf8dcd09644a9988463f88eda0d96
+    modified: 1628863698787
+    created: 1628863667482
+    name: Centauro
+    description: ""
+    environment:
+      resource1: centauro
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1628863667482
+    _type: request_group
+  - _id: fld_a6ccf8dcd09644a9988463f88eda0d96
+    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
+    modified: 1628863687685
+    created: 1628863657443
+    name: Marketplace
+    description: ""
+    environment:
+      resource: marketplace
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1627927954502.75
+    _type: request_group
+  - _id: req_87ace2d1558740c9b7c51f9999b69947
+    parentId: fld_973963dbfc6a45f28b5de48b05b377e7
+    modified: 1628876544026
+    created: 1628863781742
+    url: "{{ _.PATH }}/{{ _.resource1
+      }}/callback/1/seller/07877857837/products/123/skus/{{
+      _.requests.v2.produto['primeiro-produto'] }}/status"
+    name: Status dos produtos do Lojista
+    description: >-
+      ### 👉 Dados relevantes da URL são o código da loja e o sku;
+
+
+      ### 👉 Irá mostrar produtos cadastrados na tabela de preço do marketplace Centauro;
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_8f89835bedfd4aa8beec1b710dc45963
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1628863781790
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1699b351b7f84c9196962de6973b48e3
+    parentId: fld_e12c9f5c7a2446998966e484ac555204
+    modified: 1628863212274
+    created: 1628861810810
+    url: "{{ _.PATH }}/queryDB"
+    name: queryDB
+    description: |-
+      ### Rota para a execução de comandos SQL em outros clientes.
+
+      ### Somente acessível se o email do usuário for o do monitor...
+
+      ```json
+      {
+        "command": "SELECT 1 FROM usuario WHERE usuario.nome = :nome",
+        "params": {
+          "nome": "teste"
+        }
+      }
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - id: pair_6f705cf2ba394098876008c4e3991d42
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+      - name: Content-Type
+        value: application/json
+        id: pair_bc84184231ae4ab5a7acd0b6b5b9d08a
+    authentication: {}
+    metaSortKey: -1627910475224.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e12c9f5c7a2446998966e484ac555204
+    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
+    modified: 1628530659038
+    created: 1628515302797
+    name: Site
+    description: ""
+    environment:
+      resource: site
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1627927889816
     _type: request_group
   - _id: req_3eef5660e26146c0aca99eef2bc70544
     parentId: fld_2f2d637e53464beab5018daa563a6c83
@@ -1933,19 +2744,6 @@ resources:
       "&":
         - resource1
     metaSortKey: -1627910475174.5
-    _type: request_group
-  - _id: fld_e12c9f5c7a2446998966e484ac555204
-    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
-    modified: 1628530659038
-    created: 1628515302797
-    name: Site
-    description: ""
-    environment:
-      resource: site
-    environmentPropertyOrder:
-      "&":
-        - resource
-    metaSortKey: -1627927889816
     _type: request_group
   - _id: req_c7b63a4a521844f7b158a64e17f4aeab
     parentId: fld_2f2d637e53464beab5018daa563a6c83
@@ -2810,6 +3608,258 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_1a456c59a46e44a3af7facf4d183d8bd
+    parentId: fld_5d4ba82ccc5e4088bd51a1c9aad388e0
+    modified: 1628798390460
+    created: 1628515302642
+    url: "{{ _.PATH }}/{{ _.resource1 }}"
+    name: Consultar Pessoas
+    description: |-
+      ## 🔍🧑👧🧒
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 326714,
+              "tipo": 1,
+              "nome": "Adriana Cruz",
+              "cpfCnpj": "324.859.408-00",
+              "tipoUso": 1,
+              "email": null,
+              "dataNascimento": "1983-11-02",
+              "rg": null,
+              "sexo": null,
+              "dataFundacao": null,
+              "nomeFantasia": null,
+              "inscricaoEstadual": null,
+              "contribuinteIcms": 0,
+              "optanteSimplesNacional": 0,
+              "nomeResponsavel": null,
+              "cpfResponsavel": null,
+              "dataCadastro": "2021-08-12 13:39:41-03",
+              "grupoLojaId": 1,
+              "grupoLojaNome": "Casa Ferrari",
+              "pessoaContato": [
+                {
+                  "tipo": 1,
+                  "contato": "(11) 94640-5035"
+                }
+              ],
+              "pessoaEndereco": [
+                {
+                  "codigo": 1,
+                  "nomeDestinatario": "Adriana Cruz",
+                  "tipo": 2,
+                  "endereco": null,
+                  "logradouro": "PASTOR AGENOR CALDEIRA DINIZ",
+                  "numero": "426",
+                  "bairro": "JARDIM IMPERADOR (ZONA LESTE)",
+                  "cep": 3935080,
+                  "complemento": "Apto 31",
+                  "cidadeId": 5219,
+                  "cidadeNome": "São Paulo",
+                  "estadoId": 26,
+                  "estadoNome": "São Paulo",
+                  "estadoSigla": "SP"
+                }
+              ]
+            },
+          ],
+          "page_count": 5,
+          "page": 1,
+          "limit": 5,
+          "total": 326424,
+          "total_pages": 65285,
+          "has_more": true
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_3332f70fd6d24617a33375784ecc5faa
+        name: limit
+        value: "5"
+        description: "Max: 100"
+      - id: pair_0c1242d2687b45f9a55623baf19959cc
+        name: page
+        value: "1"
+        description: ""
+        disabled: true
+      - id: pair_b8ab38356a874c16a3d7d1ef50c11a81
+        name: order
+        value: ""
+        description: id | dataCadastro
+        disabled: true
+      - id: pair_483200a87f6c4965b3466eac330ed0fb
+        name: orderDirection
+        value: desc
+        description: asc|desc
+      - id: pair_f089fea792d248b19b029da051fc6ffb
+        name: dataCadastro
+        value: 2021-07-30T16:01:59Z
+        description: Atom Y-m-d\TH:i:sP | ISO Y-m-d
+        disabled: true
+      - id: pair_0ded0e189d1f45e8b590ab9fc8edf1e7
+        name: dataCadastro[gt]
+        value: 2021-07-30T16:01:59Z
+        description: ""
+        disabled: true
+      - id: pair_63c898e6876640659658a7461ff330a8
+        name: dataCadastro[lt]
+        value: 2021-07-30T16:01:59Z
+        description: ""
+        disabled: true
+      - id: pair_d4bd27fce99946b7a7b272d15540ddcc
+        name: dataCadastro[lte]
+        value: 2021-07-30T16:01:59Z
+        description: ""
+        disabled: true
+      - id: pair_bae30130fa364a2e833b1a7916fd8ceb
+        name: listaContatos
+        value: "1"
+        description: ""
+      - id: pair_e219ef506eed43579a8b89735326aea8
+        name: listaEnderecos
+        value: "1"
+        description: ""
+      - id: pair_b72b0d1f8f0445f1be4d1f8fb1a75044
+        name: nome
+        value: Ian Chagas
+        description: ""
+        disabled: true
+      - id: pair_c365ffda2e824f32ba7b3db2de2160f5
+        name: cpfCnpj
+        value: "085960985525"
+        description: ""
+        disabled: true
+      - id: pair_2515b354eccc4a6fa09d42a5a87cb8d2
+        name: grupoLojaId
+        value: ""
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_592a266874d045f6a4c05a9b660527c3
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627672165686
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5d4ba82ccc5e4088bd51a1c9aad388e0
+    parentId: fld_e12c9f5c7a2446998966e484ac555204
+    modified: 1628802359501
+    created: 1628515302640
+    name: Pessoa
+    description: ""
+    environment:
+      resource1: pessoa
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1627910475099.5
+    _type: request_group
+  - _id: req_652aa115ec5b4e21afcea9f9502bf509
+    parentId: fld_5d4ba82ccc5e4088bd51a1c9aad388e0
+    modified: 1628798299182
+    created: 1628515302647
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
+      'req_1a456c59a46e44a3af7facf4d183d8bd',
+      'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'no-history', 60 %}"
+    name: Visualizar Pessoa
+    description: |-
+      ## 🧑🔍
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "id": 326714,
+          "tipo": 1,
+          "nome": "Adriana Cruz",
+          "cpfCnpj": "324.859.408-00",
+          "tipoUso": 1,
+          "email": null,
+          "dataNascimento": "1983-11-02",
+          "rg": null,
+          "sexo": null,
+          "dataFundacao": null,
+          "nomeFantasia": null,
+          "inscricaoEstadual": null,
+          "contribuinteIcms": 0,
+          "optanteSimplesNacional": 0,
+          "nomeResponsavel": null,
+          "cpfResponsavel": null,
+          "dataCadastro": "2021-08-12 13:39:41-03",
+          "grupoLojaId": 1,
+          "grupoLojaNome": "Casa Ferrari",
+          "pessoaEndereco": [
+            {
+              "codigo": 1,
+              "nomeDestinatario": "Adriana Cruz",
+              "tipo": 2,
+              "endereco": null,
+              "logradouro": "PASTOR AGENOR CALDEIRA DINIZ",
+              "numero": "426",
+              "bairro": "JARDIM IMPERADOR (ZONA LESTE)",
+              "cep": 3935080,
+              "complemento": "Apto 31",
+              "cidadeId": 5219,
+              "cidadeNome": "São Paulo",
+              "estadoId": 26,
+              "estadoNome": "São Paulo",
+              "estadoSigla": "SP"
+            }
+          ],
+          "pessoaContato": [
+            {
+              "tipo": 1,
+              "contato": "(11) 94640-5035"
+            }
+          ]
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_42d33f77ac234890b6af375ac7d4ec67
+        name: listaContatos
+        value: "1"
+        description: ""
+      - id: pair_698ad4d700764ce1aba139d4ad826aa0
+        name: listaEnderecos
+        value: "1"
+        description: ""
+    headers:
+      - id: pair_95f03d750322475e9af15e6971684abc
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627672165636
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_4f137b7485ca48228645c17711038094
     parentId: fld_b2387cb651d940b2992651baee6a4df6
     modified: 1628791381484
@@ -3609,293 +4659,72 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_1a456c59a46e44a3af7facf4d183d8bd
-    parentId: fld_5d4ba82ccc5e4088bd51a1c9aad388e0
-    modified: 1628798390460
-    created: 1628515302642
-    url: "{{ _.PATH }}/{{ _.resource1 }}"
-    name: Consultar Pessoas
-    description: |-
-      ## 🔍🧑👧🧒
-
-      ### Exemplo do JSON de retorno:
-
-      ```json
-      {
-        "status": "success",
-        "data": {
-          "items": [
-            {
-              "id": 326714,
-              "tipo": 1,
-              "nome": "Adriana Cruz",
-              "cpfCnpj": "324.859.408-00",
-              "tipoUso": 1,
-              "email": null,
-              "dataNascimento": "1983-11-02",
-              "rg": null,
-              "sexo": null,
-              "dataFundacao": null,
-              "nomeFantasia": null,
-              "inscricaoEstadual": null,
-              "contribuinteIcms": 0,
-              "optanteSimplesNacional": 0,
-              "nomeResponsavel": null,
-              "cpfResponsavel": null,
-              "dataCadastro": "2021-08-12 13:39:41-03",
-              "grupoLojaId": 1,
-              "grupoLojaNome": "Casa Ferrari",
-              "pessoaContato": [
-                {
-                  "tipo": 1,
-                  "contato": "(11) 94640-5035"
-                }
-              ],
-              "pessoaEndereco": [
-                {
-                  "codigo": 1,
-                  "nomeDestinatario": "Adriana Cruz",
-                  "tipo": 2,
-                  "endereco": null,
-                  "logradouro": "PASTOR AGENOR CALDEIRA DINIZ",
-                  "numero": "426",
-                  "bairro": "JARDIM IMPERADOR (ZONA LESTE)",
-                  "cep": 3935080,
-                  "complemento": "Apto 31",
-                  "cidadeId": 5219,
-                  "cidadeNome": "São Paulo",
-                  "estadoId": 26,
-                  "estadoNome": "São Paulo",
-                  "estadoSigla": "SP"
-                }
-              ]
-            },
-          ],
-          "page_count": 5,
-          "page": 1,
-          "limit": 5,
-          "total": 326424,
-          "total_pages": 65285,
-          "has_more": true
-        }
-      }
-      ```
-    method: GET
-    body: {}
-    parameters:
-      - id: pair_3332f70fd6d24617a33375784ecc5faa
-        name: limit
-        value: "5"
-        description: "Max: 100"
-      - id: pair_0c1242d2687b45f9a55623baf19959cc
-        name: page
-        value: "1"
-        description: ""
-        disabled: true
-      - id: pair_b8ab38356a874c16a3d7d1ef50c11a81
-        name: order
-        value: ""
-        description: id | dataCadastro
-        disabled: true
-      - id: pair_483200a87f6c4965b3466eac330ed0fb
-        name: orderDirection
-        value: desc
-        description: asc|desc
-      - id: pair_f089fea792d248b19b029da051fc6ffb
-        name: dataCadastro
-        value: 2021-07-30T16:01:59Z
-        description: Atom Y-m-d\TH:i:sP | ISO Y-m-d
-        disabled: true
-      - id: pair_0ded0e189d1f45e8b590ab9fc8edf1e7
-        name: dataCadastro[gt]
-        value: 2021-07-30T16:01:59Z
-        description: ""
-        disabled: true
-      - id: pair_63c898e6876640659658a7461ff330a8
-        name: dataCadastro[lt]
-        value: 2021-07-30T16:01:59Z
-        description: ""
-        disabled: true
-      - id: pair_d4bd27fce99946b7a7b272d15540ddcc
-        name: dataCadastro[lte]
-        value: 2021-07-30T16:01:59Z
-        description: ""
-        disabled: true
-      - id: pair_bae30130fa364a2e833b1a7916fd8ceb
-        name: listaContatos
-        value: "1"
-        description: ""
-      - id: pair_e219ef506eed43579a8b89735326aea8
-        name: listaEnderecos
-        value: "1"
-        description: ""
-      - id: pair_b72b0d1f8f0445f1be4d1f8fb1a75044
-        name: nome
-        value: Ian Chagas
-        description: ""
-        disabled: true
-      - id: pair_c365ffda2e824f32ba7b3db2de2160f5
-        name: cpfCnpj
-        value: "085960985525"
-        description: ""
-        disabled: true
-      - id: pair_2515b354eccc4a6fa09d42a5a87cb8d2
-        name: grupoLojaId
-        value: ""
-        description: ""
-        disabled: true
-    headers:
-      - id: pair_592a266874d045f6a4c05a9b660527c3
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627672165686
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_5d4ba82ccc5e4088bd51a1c9aad388e0
-    parentId: fld_e12c9f5c7a2446998966e484ac555204
-    modified: 1628797820641
-    created: 1628515302640
-    name: Pessoa
-    description: ""
-    environment:
-      resource1: pessoa
-    environmentPropertyOrder:
-      "&":
-        - resource1
-    metaSortKey: -1627910475024.5
-    _type: request_group
-  - _id: req_652aa115ec5b4e21afcea9f9502bf509
-    parentId: fld_5d4ba82ccc5e4088bd51a1c9aad388e0
-    modified: 1628798299182
-    created: 1628515302647
-    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
-      'req_1a456c59a46e44a3af7facf4d183d8bd',
-      'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'no-history', 60 %}"
-    name: Visualizar Pessoa
-    description: |-
-      ## 🧑🔍
-
-      ### Exemplo do JSON de retorno:
-
-      ```json
-      {
-        "status": "success",
-        "data": {
-          "id": 326714,
-          "tipo": 1,
-          "nome": "Adriana Cruz",
-          "cpfCnpj": "324.859.408-00",
-          "tipoUso": 1,
-          "email": null,
-          "dataNascimento": "1983-11-02",
-          "rg": null,
-          "sexo": null,
-          "dataFundacao": null,
-          "nomeFantasia": null,
-          "inscricaoEstadual": null,
-          "contribuinteIcms": 0,
-          "optanteSimplesNacional": 0,
-          "nomeResponsavel": null,
-          "cpfResponsavel": null,
-          "dataCadastro": "2021-08-12 13:39:41-03",
-          "grupoLojaId": 1,
-          "grupoLojaNome": "Casa Ferrari",
-          "pessoaEndereco": [
-            {
-              "codigo": 1,
-              "nomeDestinatario": "Adriana Cruz",
-              "tipo": 2,
-              "endereco": null,
-              "logradouro": "PASTOR AGENOR CALDEIRA DINIZ",
-              "numero": "426",
-              "bairro": "JARDIM IMPERADOR (ZONA LESTE)",
-              "cep": 3935080,
-              "complemento": "Apto 31",
-              "cidadeId": 5219,
-              "cidadeNome": "São Paulo",
-              "estadoId": 26,
-              "estadoNome": "São Paulo",
-              "estadoSigla": "SP"
-            }
-          ],
-          "pessoaContato": [
-            {
-              "tipo": 1,
-              "contato": "(11) 94640-5035"
-            }
-          ]
-        }
-      }
-      ```
-    method: GET
-    body: {}
-    parameters:
-      - id: pair_42d33f77ac234890b6af375ac7d4ec67
-        name: listaContatos
-        value: "1"
-        description: ""
-      - id: pair_698ad4d700764ce1aba139d4ad826aa0
-        name: listaEnderecos
-        value: "1"
-        description: ""
-    headers:
-      - id: pair_95f03d750322475e9af15e6971684abc
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627672165636
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_bf8b8ad6d4d142c5a20142ac92b71591
+  - _id: req_9ac6464b89a14d47b6ba4b38a3b86847
     parentId: fld_ced5cdba13de4e2481740d59b07402a0
-    modified: 1628515302720
-    created: 1628515302720
-    url: "{{ _.base_url_sprint_v2 }}/site/marca"
-    name: Consulta de Marcas
-    description: ""
-    method: GET
-    body: {}
-    parameters:
-      - id: pair_6dd04957d8644073a3f6bf0090a54c3b
-        name: limit
-        value: "50"
+    modified: 1628802840007
+    created: 1628515302723
+    url: "{{ _.PATH }}/{{ _.resource1 }}"
+    name: Adicionar Marca
+    description: >-
+      ## ➕
+
+
+      ### Esquema de validação do JSON de envio:
+
+
+      ```json
+
+      {
+        "title": "Marca",
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "producaoPropria": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": [
+          "nome"
+        ]
+      }
+
+      ```
+
+
+      ### Exemplo do JSON de envio:
+
+
+      ```json
+
+      {  
+      	"nome": "{% faker 'commerce', '', 'department', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} {% faker 'company', '', '', 'companyName', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} - API",
+      	"producaoPropria": false
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"nome": "{% faker 'commerce', '', 'department', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} {% faker 'company', '', '', 'companyName', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} - API",
+        	"producaoPropria": false
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_d184bc24ad804a059d57474bba9bfb00
+      - id: pair_99b0a76444914c17a36233b923120609
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
         description: ""
-      - id: pair_de67ed6535e74423b5b3adbe529b58f8
-        name: page
-        value: "1"
-        description: ""
-        disabled: true
-      - id: pair_cce74a6aac694230b86f2f54e4fc3c13
-        name: order
-        value: nome
-        description: ""
-      - id: pair_0b8fd7b409b048eab82c4dbe9f3e3bf1
-        name: orderDirection
-        value: desc
-        description: ""
-    headers: []
-    authentication:
-      type: basic
-      useISO88591: false
-      disabled: false
-      username: "{{ _.token_arkuero }}"
-      password: "{{ _.senha_default_arkuero }}"
-    metaSortKey: -1627910506837
+    authentication: {}
+    metaSortKey: -1627910506887
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -3906,41 +4735,76 @@ resources:
     _type: request
   - _id: fld_ced5cdba13de4e2481740d59b07402a0
     parentId: fld_e12c9f5c7a2446998966e484ac555204
-    modified: 1628518313302
+    modified: 1628802387953
     created: 1628515302717
     name: Marca
     description: ""
-    environment: {}
-    environmentPropertyOrder: null
+    environment:
+      resource1: marca
+    environmentPropertyOrder:
+      "&":
+        - resource1
     metaSortKey: -1627910474974.5
     _type: request_group
-  - _id: req_9ac6464b89a14d47b6ba4b38a3b86847
+  - _id: req_bf8b8ad6d4d142c5a20142ac92b71591
     parentId: fld_ced5cdba13de4e2481740d59b07402a0
-    modified: 1628515302723
-    created: 1628515302723
-    url: "{{ _.base_url_sprint_v2 }}/site/marca"
-    name: Adicionar Marca
-    description: ""
-    method: POST
-    body:
-      mimeType: application/json
-      text: |-
-        {
-        	"nome": "Marca de Teste - API",
-        	"producaoPropria": false
+    modified: 1628861637940
+    created: 1628515302720
+    url: "{{ _.PATH }}/{{ _.resource1 }}"
+    name: Consultar Marcas
+    description: |
+      ## 🔍
+
+
+      ## Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 6,
+              "nome": "Wanke",
+              "producaoPropria": false
+            },
+          ],
+          "page_count": 50,
+          "page": 1,
+          "limit": 50,
+          "total": 92,
+          "total_pages": 2,
+          "has_more": true
         }
-    parameters: []
+      }
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_6dd04957d8644073a3f6bf0090a54c3b
+        name: limit
+        value: "50"
+        description: "Max: 100"
+      - id: pair_de67ed6535e74423b5b3adbe529b58f8
+        name: page
+        value: "1"
+        description: ""
+        disabled: true
+      - id: pair_cce74a6aac694230b86f2f54e4fc3c13
+        name: order
+        value: nome
+        description: id | nome
+      - id: pair_0b8fd7b409b048eab82c4dbe9f3e3bf1
+        name: orderDirection
+        value: desc
+        description: asc | desc
     headers:
-      - name: Content-Type
-        value: application/json
-        id: pair_d184bc24ad804a059d57474bba9bfb00
-    authentication:
-      type: basic
-      useISO88591: false
-      disabled: false
-      username: "{{ _.token_arkuero }}"
-      password: "{{ _.senha_default_arkuero }}"
-    metaSortKey: -1627910506787
+      - id: pair_3aa2becd7c344c9183aea38c47c224f8
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627910506837
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -3951,21 +4815,32 @@ resources:
     _type: request
   - _id: req_d42c380665fd42cfbc2acd158b647093
     parentId: fld_ced5cdba13de4e2481740d59b07402a0
-    modified: 1628515302727
+    modified: 1628861578236
     created: 1628515302727
-    url: "{{ _.base_url_sprint_v2 }}/site/marca/62"
-    name: Excluir Marca
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
+      'req_9ac6464b89a14d47b6ba4b38a3b86847', 'b64::JC5kYXRhLmlk::46b',
+      'always', 60 %}"
+    name: Deletar Marca
+    description: |-
+      ## ❌
+
+      ### Exemplo do JSON de retorno:
+
+      ```json 
+      {
+        "status": "success",
+        "data": "Marca excluída com sucesso"
+      }
+      ```
     method: DELETE
     body: {}
     parameters: []
-    headers: []
-    authentication:
-      type: basic
-      useISO88591: false
-      disabled: false
-      username: "{{ _.token_arkuero }}"
-      password: "{{ _.senha_default_arkuero }}"
+    headers:
+      - id: pair_b9673d54e6d3439fa083be4bf9d22526
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
     metaSortKey: -1627910506737
     isPrivate: false
     settingStoreCookies: true
@@ -3977,7 +4852,7 @@ resources:
     _type: request
   - _id: env_85e99734ad4246399a6755a906b143dc
     parentId: wrk_38305c2ed92743afa8a958901d003bf5
-    modified: 1628801433106
+    modified: 1628879266745
     created: 1628515302551
     name: Base Environment
     data:
@@ -4020,6 +4895,9 @@ resources:
           categoria:
             primeira-categoria: "{% response 'body', 'req_c7b63a4a521844f7b158a64e17f4aeab',
               'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'never', 60 %}"
+          dashboard:
+            primeiro-painel: "{% response 'body', 'req_a92f746187d64be5a542c3f7d8b8e50f',
+              'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'no-history', 60 %}"
       BASE_PATH: "{{ _.BASE_URL }}/{{ _.VERSION }}"
       PATH: "{{ _.BASE_PATH }}/{{ _.resource }}"
     dataPropertyOrder:
@@ -4065,6 +4943,7 @@ resources:
         - pedido
         - produto
         - categoria
+        - dashboard
       "&~|requests~|v2~|pedido":
         - primeiro-pedido
         - segundo-pedido
@@ -4072,6 +4951,8 @@ resources:
         - primeiro-produto
       "&~|requests~|v2~|categoria":
         - primeira-categoria
+      "&~|requests~|v2~|dashboard":
+        - primeiro-painel
     color: null
     isPrivate: false
     metaSortKey: 1626869376957
