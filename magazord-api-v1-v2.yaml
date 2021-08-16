@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-13T18:31:47.382Z
+__export_date: 2021-08-16T21:38:11.087Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_4e64adc404a74514a4f53a5c1b3af57e
@@ -1409,18 +1409,32 @@ resources:
         - resource
     metaSortKey: -1627999558910
     _type: request_group
-  - _id: req_4aeb0a0228c54f898f6911b2f7787209
-    parentId: fld_fa4d69c8d52b4fb4911f9e2dc0bb76d4
-    modified: 1628717569170
-    created: 1628515302785
+  - _id: req_3587a9e813264710b046b0471a1ed136
+    parentId: fld_7650133f223c47b49af7fd3c6bc4717b
+    modified: 1629149351627
+    created: 1629148215234
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
-    name: List
+    name: Buscar Características
     description: |-
-      #Exemplo de envio:
+      ## 🌳🌳🌳
+
+      ### Obervação:
+
+      - Não possui filtros.
+
+      ### Exemplo do JSON de resposta:
 
       ```json
       {
-        "sim": "yes"
+        "status": "success",
+        "data": {
+          "entries": [
+            {
+              "id": 65,
+              "nome": "Eletrodomésticos - Grades Individuias de Ferro Fundido"
+            },
+          ]
+        }
       }
       ```
     method: GET
@@ -1428,7 +1442,82 @@ resources:
     parameters: []
     headers:
       - id: pair_1a1269458fb8468c971562f52e22a303
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1627929254165.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7650133f223c47b49af7fd3c6bc4717b
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629148228053
+    created: 1629148181610
+    name: Características
+    description: ""
+    environment:
+      resource1: caracteristicas
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1629148181610
+    _type: request_group
+  - _id: fld_5c4b2c0d36cc48c19553353f0d89879e
+    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
+    modified: 1628515302737
+    created: 1628515302737
+    name: Dashboard
+    description: ""
+    environment:
+      resource: dashboard
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1627928148563
+    _type: request_group
+  - _id: req_4aeb0a0228c54f898f6911b2f7787209
+    parentId: fld_fa4d69c8d52b4fb4911f9e2dc0bb76d4
+    modified: 1629149021910
+    created: 1628515302785
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Buscar Árvore de Categorias
+    description: |-
+      ## 🌳🌳🌳
+
+      ### Obervação:
+
+      - Não possui filtros.
+
+      ### Exemplo do JSON de resposta:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "entries": [
+            {
+              "id": 202,
+              "nome": "Aquecedores a Gás",
+              "pai": null,
+              "nivel": 1
+            },      
+          ]
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1a1269458fb8468c971562f52e22a303
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.jwt.value }}"
         description: ""
         disabled: false
@@ -1444,7 +1533,7 @@ resources:
     _type: request
   - _id: fld_fa4d69c8d52b4fb4911f9e2dc0bb76d4
     parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
-    modified: 1628515302783
+    modified: 1629148153403
     created: 1628515302783
     name: Categorias
     description: ""
@@ -1453,33 +1542,238 @@ resources:
     environmentPropertyOrder:
       "&":
         - resource1
-    metaSortKey: -1627929273159
+    metaSortKey: -1629147895276
     _type: request_group
-  - _id: fld_5c4b2c0d36cc48c19553353f0d89879e
-    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
-    modified: 1628515302737
-    created: 1628515302737
-    name: Dashboard
-    description: ""
-    environment:
-      resource: dashboard
-    environmentPropertyOrder:
-      "&":
-        - resource
-    metaSortKey: -1627928148563
-    _type: request_group
-  - _id: req_639270747ac04a6bb14c816da84b4253
-    parentId: fld_0b1f4681e4a248468062cb68c507a748
-    modified: 1628515302778
-    created: 1628515302778
-    url: "{{ _.BASE_URL }}/{{ _.resource }}/{{ _.resource1 }}"
-    name: List
+  - _id: req_a92c0b4cf66d482abbbfe46c42217bc0
+    parentId: fld_6217ccca736b4665aacb887b4b606ab7
+    modified: 1629149369101
+    created: 1629147905030
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Depósitos
     description: |-
-      #Exemplo de envio:
+      ## 🏦📦
+
+      ### Observações:
+
+      1. Ordenado pelo nome em ordem crescente;
+      2. Não possui filtros;
+
+      ### Exemplo do JSON de retorno:
 
       ```json
       {
-        "sim": "yes"
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 44,
+              "nome": "Assistência"
+            },
+          ],
+          "page_count": 49,
+          "page": 1,
+          "limit": 100,
+          "total": 49,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_af1a395b8bb04b848cd871fa3d8df0a8
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1628944386376.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6217ccca736b4665aacb887b4b606ab7
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629148083289
+    created: 1629147895226
+    name: Depósito
+    description: ""
+    environment:
+      resource1: deposito
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1629147895226
+    _type: request_group
+  - _id: req_521569d14f4b481e9e0cd68a46d23898
+    parentId: fld_f5fe5ffef51a4050a98c6d6f6821926c
+    modified: 1629147677086
+    created: 1629147374199
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Gateways
+    description: |-
+      ## 🚪
+
+      ### Observações:
+
+      1. Ordenado pelo nome em ordem crescente;
+      2. Não possui filtros;
+      3. Somente do tipo ZOOP.
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 3,
+              "nome": "Magapay",
+              "opcoes": {
+                "gateway": {
+                  "softDescriptor": "Casa Ferrari",
+                  "usa_split_transacao": false,
+                  "diasAddVencimentoBoleto": 1,
+                  "diasCancelamentoAutomatico": 3,
+                  "diasCorridos": false,
+                  "instrucaoAdicional": "<<NÃO RECEBER APÓS VENCIMENTO.>>",
+                  "exibeConsultaSellers": true,
+                  "marketplaceId": "fa926300d359446eacd2f5507642f683",
+                  "sellerId": "720767b4ddb244b084805ba321f616d6",
+                  "publishableKey": "zpk_prod_mLLyEqxYQol19WVNR01ZBZFo"
+                }
+              }
+            }
+          ],
+          "page_count": 1,
+          "page": 1,
+          "limit": 100,
+          "total": 1,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_af1a395b8bb04b848cd871fa3d8df0a8
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1629147374199
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f5fe5ffef51a4050a98c6d6f6821926c
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629149205029
+    created: 1629147344350
+    name: Gateway
+    description: ""
+    environment:
+      resource1: gateway
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1629147757507
+    _type: request_group
+  - _id: req_639270747ac04a6bb14c816da84b4253
+    parentId: fld_0b1f4681e4a248468062cb68c507a748
+    modified: 1629149096131
+    created: 1628515302778
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Indicadores
+    description: |-
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 2,
+              "nome": "Análise de Risco",
+              "categoria": {
+                "id": 8,
+                "nome": "Gerais"
+              },
+              "configs": {
+                "filtro": {
+                  "default": {
+                    "dataFinal": "2020-11-30T03:00:00.000Z",
+                    "dataInicio": "2020-11-01T03:00:00.000Z",
+                    "tipoPeriodo": "30DIAS",
+                    "filtroDescricao": "Análise de Risco - Últimos 30 dias"
+                  }
+                },
+                "layouts": [
+                  {
+                    "minH": 2,
+                    "minW": 3,
+                    "width": 12,
+                    "height": 2,
+                    "breakpoint": "xl"
+                  },
+                  {
+                    "minH": 2,
+                    "minW": 3,
+                    "width": 10,
+                    "height": 2,
+                    "breakpoint": "lg"
+                  },
+                  {
+                    "minH": 3,
+                    "minW": 3,
+                    "width": 6,
+                    "height": 3,
+                    "breakpoint": "md"
+                  },
+                  {
+                    "minH": 2,
+                    "minW": 4,
+                    "width": 4,
+                    "height": 2,
+                    "breakpoint": "sm"
+                  },
+                  {
+                    "minH": 3,
+                    "minW": 2,
+                    "width": 2,
+                    "height": 3,
+                    "breakpoint": "xs"
+                  }
+                ]
+              },
+              "visible": true,
+              "sistema": {
+                "id": "MAGAZORD",
+                "name": "MagaZord",
+                "description": "Zord"
+              }
+            },
+          ],
+          "page_count": 39,
+          "page": 1,
+          "limit": 100,
+          "total": 39,
+          "total_pages": 1,
+          "has_more": false
+        }
       }
       ```
     method: GET
@@ -1487,14 +1781,10 @@ resources:
     parameters: []
     headers:
       - id: pair_3175e20f1d4a40a5b744b18299952cfb
-        name: Authorization
-        value: "{{ _.JWT_BEARER_AUTHORIZATION }}"
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
         description: ""
-        disabled: true
-      - id: pair_1a1269458fb8468c971562f52e22a303
-        name: Authorization
-        value: "{{ _.BASIC_AUTHORIZATION }}"
-        description: ""
+        disabled: false
     authentication: {}
     metaSortKey: -1627929219095
     isPrivate: false
@@ -1507,7 +1797,7 @@ resources:
     _type: request
   - _id: fld_0b1f4681e4a248468062cb68c507a748
     parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
-    modified: 1628515302770
+    modified: 1629149194233
     created: 1628515302770
     name: Indicador
     description: ""
@@ -1516,19 +1806,94 @@ resources:
     environmentPropertyOrder:
       "&":
         - resource1
-    metaSortKey: -1627929208525
+    metaSortKey: -1629147619788
     _type: request_group
   - _id: req_5e758f492fc2434ba955619a7faa1e1a
     parentId: fld_0b1f4681e4a248468062cb68c507a748
-    modified: 1628515302772
+    modified: 1629149407891
     created: 1628515302772
-    url: ""
-    name: /:id
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.dashboard['primeiro-indicador'] }}"
+    name: Visualizar Indicador
+    description: |-
+      ## 🔍
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "id": 2,
+          "nome": "Análise de Risco",
+          "categoria": {
+            "id": 8,
+            "nome": "Gerais"
+          },
+          "possuiPrivilegio": false,
+          "configs": {
+            "filtro": {
+              "default": {
+                "dataFinal": "2020-11-30T03:00:00.000Z",
+                "dataInicio": "2020-11-01T03:00:00.000Z",
+                "tipoPeriodo": "30DIAS",
+                "filtroDescricao": "Análise de Risco - Últimos 30 dias"
+              }
+            },
+            "layouts": [
+              {
+                "minH": 2,
+                "minW": 3,
+                "width": 12,
+                "height": 2,
+                "breakpoint": "xl"
+              },
+              {
+                "minH": 2,
+                "minW": 3,
+                "width": 10,
+                "height": 2,
+                "breakpoint": "lg"
+              },
+              {
+                "minH": 3,
+                "minW": 3,
+                "width": 6,
+                "height": 3,
+                "breakpoint": "md"
+              },
+              {
+                "minH": 2,
+                "minW": 4,
+                "width": 4,
+                "height": 2,
+                "breakpoint": "sm"
+              },
+              {
+                "minH": 3,
+                "minW": 2,
+                "width": 2,
+                "height": 3,
+                "breakpoint": "xs"
+              }
+            ]
+          },
+          "sistema": {
+            "id": "MAGAZORD",
+            "name": "MagaZord",
+            "description": "Zord"
+          }
+        }
+      }
+      ```
     method: GET
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_a2fb99dd06db4993ac0449f0006c38e5
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
     metaSortKey: -1627929084883.75
     isPrivate: false
@@ -1541,15 +1906,158 @@ resources:
     _type: request
   - _id: req_f0de08dab58f471db561caadfc326cf0
     parentId: fld_0b1f4681e4a248468062cb68c507a748
-    modified: 1628515302775
+    modified: 1629149299654
     created: 1628515302775
-    url: ""
-    name: /:id/dados
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/42/dados"
+    name: Buscar Dados do Indicador
+    description: |-
+      ### Observação:
+
+      * O Retorno é sempre específico conforme o indicador.
+
+      ### Exemplo do indicador de Custo Médio de Transporte:
+
+      ```json 
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 2020,
+            "data": [
+              {
+                "x": "Jan",
+                "y": 2892999.05
+              },
+              {
+                "x": "Fev",
+                "y": 2655148.8
+              },
+              {
+                "x": "Mar",
+                "y": 3244739.17
+              },
+              {
+                "x": "Abr",
+                "y": 4297083.46
+              },
+              {
+                "x": "Mai",
+                "y": 7019862.91
+              },
+              {
+                "x": "Jun",
+                "y": 7198926.34
+              },
+              {
+                "x": "Jul",
+                "y": 6334515.75
+              },
+              {
+                "x": "Ago",
+                "y": 3114909.21
+              },
+              {
+                "x": "Set",
+                "y": 143.08
+              },
+              {
+                "x": "Out",
+                "y": 0
+              },
+              {
+                "x": "Nov",
+                "y": 0
+              },
+              {
+                "x": "Dez",
+                "y": 58.15
+              }
+            ]
+          },
+          {
+            "id": 2021,
+            "data": [
+              {
+                "x": "Jan",
+                "y": 3738.64
+              },
+              {
+                "x": "Fev",
+                "y": 931.91
+              },
+              {
+                "x": "Mar",
+                "y": 590.8
+              },
+              {
+                "x": "Abr",
+                "y": 2766.88
+              },
+              {
+                "x": "Mai",
+                "y": 200
+              },
+              {
+                "x": "Jun",
+                "y": 3526.62
+              },
+              {
+                "x": "Jul",
+                "y": 6096.95
+              },
+              {
+                "x": "Ago",
+                "y": 99.26
+              },
+              {
+                "x": "Set",
+                "y": 0
+              },
+              {
+                "x": "Out",
+                "y": 0
+              },
+              {
+                "x": "Nov",
+                "y": 0
+              },
+              {
+                "x": "Dez",
+                "y": 0
+              }
+            ]
+          }
+        ]
+      }
+      ```
     method: GET
     body: {}
-    parameters: []
-    headers: []
+    parameters:
+      - id: pair_5961ab53bacb44b0915b9cad25b08ce1
+        name: loja
+        value: "1"
+        description: ""
+      - id: pair_677157b946aa4eb5b89aea3440de3b9f
+        name: regiao
+        value: "1"
+        description: ""
+      - id: pair_578e57e19ac047e48760d74375aba868
+        name: tipoPeriodo
+        value: PERIODO
+        description: ""
+      - id: pair_2dd3971d8c714c72aeabdb27521c06d5
+        name: dataInicio
+        value: 2021-02-01T03:00:00.000Z
+        description: ""
+      - id: pair_9a41395212f240a2bf2adf57a709d2e7
+        name: dataFinal
+        value: 2021-07-31T03:00:00.000Z
+        description: ""
+    headers:
+      - id: pair_d248286e516f4598b0a951ef8d6e974f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
     metaSortKey: -1627929058051.5
     isPrivate: false
@@ -1562,7 +2070,7 @@ resources:
     _type: request
   - _id: req_fc1cb57392bd49d4bfc4377335a843fa
     parentId: fld_8e7d334da83e441fa92b81af57c70128
-    modified: 1628878029084
+    modified: 1629149426053
     created: 1628515302766
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Consultar Lojas
@@ -1577,6 +2085,7 @@ resources:
       ### Exemplo do JSON de retorno:
 
       ```json
+      {
        "status": "success",
         "data": {
           "items": [
@@ -1601,13 +2110,9 @@ resources:
     headers:
       - id: pair_f9c3f8e6e70d43a399fc34616d493068
         name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-        disabled: true
-      - id: pair_e82d917cd44b4c56a81eaad165cb64ee
-        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.jwt.value }}"
         description: ""
+        disabled: false
     authentication: {}
     metaSortKey: -1627928972503
     isPrivate: false
@@ -1620,7 +2125,7 @@ resources:
     _type: request
   - _id: fld_8e7d334da83e441fa92b81af57c70128
     parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
-    modified: 1628877085210
+    modified: 1629149188184
     created: 1628515302764
     name: Loja
     description: ""
@@ -1629,11 +2134,72 @@ resources:
     environmentPropertyOrder:
       "&":
         - resource1
-    metaSortKey: -1627929130272
+    metaSortKey: -1628842810393.75
+    _type: request_group
+  - _id: req_073c73bd67f04f8e94e61fd947ff0511
+    parentId: fld_f8de5acdd05342aea39ea8c67b4f95db
+    modified: 1629147790569
+    created: 1629147643689
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Lojistas
+    description: |-
+      ## 🏪👨
+
+      ### Observações:
+
+      1. Ordenado pelo nome em ordem crescente;
+      2. Não possui filtros;
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [],
+          "page_count": 0,
+          "page": 1,
+          "limit": 100,
+          "total": 0,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_af1a395b8bb04b848cd871fa3d8df0a8
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1629012048984
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f8de5acdd05342aea39ea8c67b4f95db
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629148167876
+    created: 1629147626218
+    name: Lojistas
+    description: ""
+    environment:
+      resource1: lojistas
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1628538276437.5
     _type: request_group
   - _id: req_5498084f46164634bd4c0639198a20a0
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628879480761
+    modified: 1629145208098
     created: 1628515302747
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Adicionar Painel
@@ -1739,10 +2305,69 @@ resources:
         "required": ["nome","indicadores"]
       }
       ```
+
+      ### Exemplo do JSON de envio:
+
+      ```json
+      {
+      	"nome": "P a i n e l",
+      	"indicadores": [
+      		{
+      			"id": "{% uuid 'v4' %}",
+      			"indicador": {
+      				"id": 1
+      			},
+      			"configs": [
+      				{
+      					"breakpoint": "xl",
+      					"width": 250,
+      					"hieght": 250,
+      					"posX": 0,
+      					"posY": 0
+      				}
+      			]
+      		}
+      	]
+      }
+      ```
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "id": 31
+        }
+      }
+      ```
     method: POST
     body:
       mimeType: application/json
-      text: ""
+      text: >-
+        {
+        	"nome": "P a i n e l API {% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '10000', 'pt_BR' %}",
+        	"indicadores": [
+        		{
+        			"id": "{% uuid 'v4' %}",
+        			"indicador": {
+        				"id": 1
+        			},
+        			"configs": [
+        				{
+        					"breakpoint": "xl",
+        					"width": 250,
+        					"hieght": 250,
+        					"posX": 0,
+        					"posY": 0
+        				}
+        			],
+        			"filtros": {
+        				"loja": 1
+        			}
+        		}
+        	]
+        }
     parameters: []
     headers:
       - name: Content-Type
@@ -1913,12 +2538,206 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_85511ea5bb884b3f8e3eeecd84cfac26
+    parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
+    modified: 1628889623116
+    created: 1628515302751
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.dashboard['primeiro-painel-id'] }}"
+    name: Editar Painel
+    description: >-
+      ### Esquema de validação do JSON de envio:
+
+
+      ```json
+
+      {
+        "title": "Painel",
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "description": "Nome do painel"
+          },
+          "indicadores": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/painelIndicador"
+                }
+              ]
+            }
+          }
+        },
+        "definitions": {
+          "painelIndicador": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "FK de painel_indicador"
+              },
+              "indicador": {
+                "type": "object",
+                "oneOf": {
+                  "$ref": "#/definitions/indicador"
+                }
+              },
+              "configs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": [
+                    {
+                      "$ref": "#/definitions/indicador-config"
+                    }
+                  ]
+                }
+              },
+              "filtros": {
+                  "type": "object"
+              }
+            },
+            "required": ["id", "indicador", "configs"],
+            "additionalProperties": false
+          },
+          "indicador": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer",
+                "description": "ID do indicador"
+              }
+            },
+            "required": ["id"]
+          },
+          "indicador-config": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "integer",
+                "description": "Largura do indicador",
+                "default": 250
+              },
+              "height": {
+                "type": "integer",
+                "description": "Altura do indicador",
+                "default": 250
+              },
+              "posX": {
+                "type": "integer",
+                "description": "Posição X do indicador",
+                "default": 0
+              },
+              "posY": {
+                "type": "integer",
+                "description": "Posição Y do indicador",
+                "default": 0
+              },
+              "breakpoint": {
+                "type": "string",
+                "description": "Breakpoint principal do indicador",
+                "default": "xl"
+              }
+            },
+            "required": ["width", "height", "posX", "posY", "breakpoint"]
+          }
+        },
+        "required": ["id","nome","indicadores"]
+      }
+
+      ```
+
+
+      ### Exemplo do JSON de envio:
+
+
+      ```json
+
+      {
+      	"dataCadastro": "2021-08-13T16:01:59Z",
+      	"dataHoraMovimento": "2021-07-30T16:01:59",
+      	"nome": "P a i n e l - alterado {% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '10000', 'pt_BR' %}",
+      	"indicadores": [
+      		{
+      			"id": "{% uuid 'v4' %}",
+      			"indicador": {
+      				"id": 1
+      			},
+      			"configs": [
+      				{
+      					"breakpoint": "xl",
+      					"width": 250,
+      					"hieght": 250,
+      					"posX": 0,
+      					"posY": 0
+      				}
+      			],
+      			"filtros": {
+      				
+      			}
+      		}
+      	]
+      }
+
+      ```
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"dataCadastro": "2021-08-13T16:01:59Z",
+        	"dataHoraMovimento": "2021-07-30T16:01:59",
+        	"nome": "P a i n e l - alterado {% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '10000', 'pt_BR' %}",
+        	"indicadores": [
+        		{
+        			"id": "{% uuid 'v4' %}",
+        			"indicador": {
+        				"id": 1
+        			},
+        			"configs": [
+        				{
+        					"breakpoint": "xl",
+        					"width": 250,
+        					"hieght": 250,
+        					"posX": 0,
+        					"posY": 0
+        				}
+        			],
+        			"filtros": {
+        				
+        			}
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8c294551727042b997e648142a59639d
+      - id: pair_e92f2724f1df4e218deaac068fde0606
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627929004368.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_953923b7a1204d02812a1a40251756fa
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628879406050
+    modified: 1629142942799
     created: 1628515302744
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
-      _.requests.v2.dashboard['primeiro-painel'] }}"
+      _.requests.v2.dashboard['primeiro-painel-id'] }}"
     name: Visualizar Painel
     description: >-
       ## Visualizar o painel do usuário da autentiação
@@ -2023,38 +2842,33 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_85511ea5bb884b3f8e3eeecd84cfac26
-    parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302751
-    created: 1628515302751
-    url: ""
-    name: /:id
-    description: ""
-    method: PUT
-    body: {}
-    parameters: []
-    headers: []
-    authentication: {}
-    metaSortKey: -1627929004287
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_24d8137e43694b549ba91848c9cadeb1
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302757
+    modified: 1628886184685
     created: 1628515302757
-    url: ""
-    name: /:id
-    description: ""
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
+      'req_5498084f46164634bd4c0639198a20a0', 'b64::JC5kYXRhLmlk::46b',
+      'always', 60 %}"
+    name: Excluir Painel
+    description: |-
+      ## ❌
+
+      ### Exemplo do JSON de retorno: 
+
+      ```json
+      {
+        "status": "success",
+        "data": "Painel excluído com sucesso!"
+      }
+      ```
     method: DELETE
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_41581014e1d345edb07087767e17481f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
     metaSortKey: -1627929004262
     isPrivate: false
@@ -2066,18 +2880,34 @@ resources:
     settingFollowRedirects: global
     _type: request
   - _id: req_04804e06c70a47ba8abde998ca688158
-    parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302754
+    parentId: fld_5ba3f1777b06456c8201e8768e9fc3fd
+    modified: 1629145976436
     created: 1628515302754
-    url: ""
-    name: /:id/filtros
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.dashboard['primeiro-painel-id'] }}/{{ _.resource2 }}"
+    name: Editar Filtros
     description: ""
     method: PUT
-    body: {}
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"indicador": "{{ _.requests.v2.dashboard['primeiro-painel-filtro-id'] }}",
+        	"filtros": {
+        		"loja": 1
+        	}
+        }
     parameters: []
-    headers: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_786cfa6340d34bfb9e6cc2290bc29b44
+      - id: pair_b898e396bbe944a0bb8041d861903c05
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
-    metaSortKey: -1627929004237
+    metaSortKey: -1627929004318.25
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -2086,19 +2916,38 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_803df12c65f640328b3b7b1c713421c9
+  - _id: fld_5ba3f1777b06456c8201e8768e9fc3fd
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628515302760
+    modified: 1628886281238
+    created: 1628886259060
+    name: Filtros
+    description: ""
+    environment:
+      resource2: filtros
+    environmentPropertyOrder:
+      "&":
+        - resource2
+    metaSortKey: -1627929004212
+    _type: request_group
+  - _id: req_803df12c65f640328b3b7b1c713421c9
+    parentId: fld_5ba3f1777b06456c8201e8768e9fc3fd
+    modified: 1629145309941
     created: 1628515302760
-    url: ""
-    name: /:id/filtros/:indicador
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.dashboard['primeiro-painel-id'] }}/{{ _.resource2 }}/{{
+      _.requests.v2.dashboard['primeiro-painel-filtro-id'] }}"
+    name: Excluir Filtro do Indicador
     description: ""
     method: DELETE
     body: {}
     parameters: []
-    headers: []
+    headers:
+      - id: pair_23c4bbecfb9e40ae9ae018ae450c7642
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
     authentication: {}
-    metaSortKey: -1627928988370
+    metaSortKey: -1627929004268.25
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -2107,6 +2956,237 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_2bf471e50e4049b8ac6ca4b8a515266c
+    parentId: fld_5021658a15bc43d59640c9bddd451aba
+    modified: 1629149599644
+    created: 1629149009837
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Regiões
+    description: |-
+      ## 🗺
+
+      ### Obervação:
+
+      - Não possui filtros.
+
+      ### Exemplo do JSON de resposta:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 1,
+              "nome": "Norte"
+            },
+            {
+              "id": 2,
+              "nome": "Nordeste"
+            },
+            {
+              "id": 3,
+              "nome": "Centro Oeste"
+            },
+            {
+              "id": 4,
+              "nome": "Sudeste"
+            },
+            {
+              "id": 5,
+              "nome": "Sul"
+            }
+          ],
+          "page_count": 5,
+          "page": 1,
+          "limit": 100,
+          "total": 5,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1a1269458fb8468c971562f52e22a303
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1627929236630.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5021658a15bc43d59640c9bddd451aba
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629149322063
+    created: 1629148999400
+    name: Região
+    description: ""
+    environment:
+      resource1: regiao
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1627928995032
+    _type: request_group
+  - _id: req_6ed178786ee24b0ebb5887a8d18fbd39
+    parentId: fld_f1e8388f997c4d08b677afbb8dc0fda8
+    modified: 1629149701567
+    created: 1629149571002
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Estados
+    description: |-
+      ## 🗺
+
+      ### Obervação:
+
+      - Não possui filtros.
+
+      ### Exemplo do JSON de resposta:
+
+      ```json
+      {  
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "codigo": 1,
+              "nome": "Acre",
+              "sigla": "AC",
+              "codigoIbge": 12,
+              "regiao": {
+                "id": 1
+              }
+            },
+          ],
+          "page_count": 27,
+          "page": 1,
+          "limit": 100,
+          "total": 27,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1a1269458fb8468c971562f52e22a303
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1627929236630.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f1e8388f997c4d08b677afbb8dc0fda8
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629149621923
+    created: 1629149570996
+    name: Estado
+    description: ""
+    environment:
+      resource1: estado
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1627928571797.5
+    _type: request_group
+  - _id: req_34ef2b45dc9d479a8032f9609fa9789e
+    parentId: fld_624ee4b348dd497cb1ffb4c04131bea2
+    modified: 1629149839643
+    created: 1629149741073
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Transportadoras
+    description: |-
+      ## 🚚📦
+
+      ### Obervação:
+
+      - Não possui filtros.
+
+      ### Exemplo do JSON de resposta:
+
+      ```json
+      {  
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 6,
+              "nome": "Agrupada",
+              "opcoes": {
+                "etiquetaImpressao": "etiquetaCorreios",
+                "etiquetaImpressaoJamef": "etiquetaJamef",
+                "etiquetaImpressaoOutros": "etiquetaPadrao",
+                "codigoRastreioInterno": false,
+                "realizaImpressaoDiretaEtiqueta": true,
+                "contratoTerceiro": false,
+                "envioNotificacao": "1",
+                "tamanhoEtiquetaImpressao": "etiquetaMedio"
+              },
+              "tipo": 0,
+              "versaoProceda": null
+            },
+          ],
+          "page_count": 47,
+          "page": 1,
+          "limit": 100,
+          "total": 47,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1a1269458fb8468c971562f52e22a303
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1627929236630.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_624ee4b348dd497cb1ffb4c04131bea2
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629149772506
+    created: 1629149741070
+    name: Transportadora
+    description: ""
+    environment:
+      resource1: transportadora
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1627928360180.25
+    _type: request_group
   - _id: req_84eef3dc39fe4c3c98e7c404be80a441
     parentId: fld_167ab2be58b04fc8bb25fa49b7e61766
     modified: 1628863388661
@@ -4852,7 +5932,7 @@ resources:
     _type: request
   - _id: env_85e99734ad4246399a6755a906b143dc
     parentId: wrk_38305c2ed92743afa8a958901d003bf5
-    modified: 1628879266745
+    modified: 1629146285041
     created: 1628515302551
     name: Base Environment
     data:
@@ -4897,6 +5977,13 @@ resources:
               'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'never', 60 %}"
           dashboard:
             primeiro-painel: "{% response 'body', 'req_a92f746187d64be5a542c3f7d8b8e50f',
+              'b64::JC5kYXRhLml0ZW1zWzBd::46b', 'no-history', 60 %}"
+            primeiro-painel-id: "{% jsonpath _.requests.v2.dashboard['primeiro-painel'],
+              'b64::JC5pZA==::46b' %}"
+            primeiro-painel-filtro-id: "{% jsonpath
+              _.requests.v2.dashboard['primeiro-painel'],
+              'b64::JC5pbmRpY2Fkb3Jlc1swXS5pZA==::46b' %}"
+            primeiro-indicador: "{% response 'body', 'req_639270747ac04a6bb14c816da84b4253',
               'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'no-history', 60 %}"
       BASE_PATH: "{{ _.BASE_URL }}/{{ _.VERSION }}"
       PATH: "{{ _.BASE_PATH }}/{{ _.resource }}"
@@ -4953,6 +6040,9 @@ resources:
         - primeira-categoria
       "&~|requests~|v2~|dashboard":
         - primeiro-painel
+        - primeiro-painel-id
+        - primeiro-painel-filtro-id
+        - primeiro-indicador
     color: null
     isPrivate: false
     metaSortKey: 1626869376957
