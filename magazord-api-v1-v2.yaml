@@ -1,11 +1,11 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-16T21:38:11.087Z
+__export_date: 2021-08-17T15:55:52.405Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_4e64adc404a74514a4f53a5c1b3af57e
     parentId: fld_789e6a04ca7d411ba21377811c9086d2
-    modified: 1628858342669
+    modified: 1629215366015
     created: 1628515302830
     url: "{{ _.BASE_PATH }}/enviouCliente"
     name: Consultar Clientes
@@ -36,7 +36,7 @@ resources:
     parameters: []
     headers:
       - id: pair_a583df0d869248bdb2b02c027b18da68
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -82,7 +82,7 @@ resources:
     _type: workspace
   - _id: req_6a7c968e61464e8f8bba945a146efced
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1628858315374
+    modified: 1629215349816
     created: 1628515302578
     url: "{{ _.PATH }}"
     name: Adicionar Movimentação Estoque
@@ -179,7 +179,7 @@ resources:
         value: application/json
         id: pair_7ce0227f6e394938bae120817e250908
       - id: pair_6e007e69c7384b47880b714eed6cbd43
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -207,7 +207,7 @@ resources:
     _type: request_group
   - _id: req_69c2c6531b564945997a096ed4613788
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1628858322590
+    modified: 1629215360106
     created: 1628515302592
     url: "{{ _.BASE_PATH }}/listEstoque"
     name: Consultar Produtos do Estoque
@@ -262,7 +262,7 @@ resources:
         disabled: true
     headers:
       - id: pair_ffde28a612d648cc9a6420c0521342a9
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
         disabled: false
@@ -278,7 +278,7 @@ resources:
     _type: request
   - _id: req_3701408dcdab4e2cb92abaa4f0d173db
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1628858331181
+    modified: 1629215362648
     created: 1628515302595
     url: "{{ _.BASE_PATH }}/listMovimentacaoEstoque"
     name: Consultar Movimentações de Estoque
@@ -342,7 +342,7 @@ resources:
         disabled: true
     headers:
       - id: pair_02f8e4df6a2b4e798d7f2cfbb9a39b28
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -357,7 +357,7 @@ resources:
     _type: request
   - _id: req_f189383886674009b79848a998995f92
     parentId: fld_0735e64ed3db4c06a15528f734aeacea
-    modified: 1628858300847
+    modified: 1629215369412
     created: 1628515302849
     url: "{{ _.BASE_PATH }}/listFechamentoMagazord"
     name: Consultar Fechamentos Magazord
@@ -377,7 +377,7 @@ resources:
         disabled: false
     headers:
       - id: pair_5f9774f3c5b9405b899bff7e1799385a
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
         disabled: false
@@ -403,7 +403,7 @@ resources:
     _type: request_group
   - _id: req_377fc7e148bb4131942f5de3415ec41d
     parentId: fld_0735e64ed3db4c06a15528f734aeacea
-    modified: 1628858307102
+    modified: 1629215371751
     created: 1628515302843
     url: "{{ _.BASE_PATH }}/fechamentoMagazord"
     name: Visualizar Fechamento MagaZord
@@ -437,7 +437,7 @@ resources:
         disabled: false
     headers:
       - id: pair_b94cbfcc2e23499d948df2b5f786a7d7
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
         disabled: false
@@ -453,7 +453,7 @@ resources:
     _type: request
   - _id: req_0a1b3c79370f4e0aa07645252c6850d8
     parentId: fld_127bf138948f4979a7ef67ec7831304d
-    modified: 1628858375052
+    modified: 1629215376291
     created: 1628515302837
     url: "{{ _.PATH }}"
     name: Adicionar Mensagem
@@ -547,7 +547,7 @@ resources:
         value: application/json
         id: pair_1139dca84430436c85161c59abecdae6
       - id: pair_bfa516fd7e0246c4beb19f2edc5205e9
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -575,7 +575,7 @@ resources:
     _type: request_group
   - _id: req_51fff7b917cc419d93cae2d3e280ecd8
     parentId: fld_867929e6cc5448919de7b4516ef65230
-    modified: 1628858400500
+    modified: 1629215380220
     created: 1628515302823
     url: "{{ _.BASE_PATH }}/enviouNewsletter"
     name: Consultar Pessoas da Newsletter
@@ -601,7 +601,7 @@ resources:
     parameters: []
     headers:
       - id: pair_70c1e6cfcb7f42c8b1dcff43899f120d
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -626,7 +626,7 @@ resources:
     _type: request_group
   - _id: req_90ab4f939599408db00374e56e69c5d1
     parentId: fld_f5fa6a1dc704488c9d8ed7d3817053d5
-    modified: 1628858408931
+    modified: 1629215386140
     created: 1628515302808
     url: "{{ _.PATH }}"
     name: Adicionar Nota Fiscal
@@ -875,7 +875,7 @@ resources:
         value: application/json
         id: pair_1139dca84430436c85161c59abecdae6
       - id: pair_35a811c7d98c4637a68ccff23a108138
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -903,7 +903,7 @@ resources:
     _type: request_group
   - _id: req_573a887fb1a9437b831f9fac198f5875
     parentId: fld_f5fa6a1dc704488c9d8ed7d3817053d5
-    modified: 1628858414403
+    modified: 1629215388838
     created: 1628515302811
     url: "{{ _.PATH }}/{% prompt 'Número', 'Número', '123123', '', false, true %}"
     name: Visualizar Nota Fiscal
@@ -925,7 +925,7 @@ resources:
     parameters: []
     headers:
       - id: pair_3ded7c6d6fc343088bfea4455145dcd4
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -940,7 +940,7 @@ resources:
     _type: request
   - _id: req_a265bd98c9b14001ab4659e21069c4d0
     parentId: fld_604da03866f6496086f8cceed583752f
-    modified: 1628858421899
+    modified: 1629215393161
     created: 1628515302603
     url: "{{ _.BASE_PATH }}/listPreco"
     name: Consultar Preços
@@ -1005,7 +1005,7 @@ resources:
         disabled: true
     headers:
       - id: pair_33b85dc8375e46e8b2f74036b719afa3
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -1033,7 +1033,7 @@ resources:
     _type: request_group
   - _id: req_61d98bef5a584a3bb3a8881967644133
     parentId: fld_604da03866f6496086f8cceed583752f
-    modified: 1628858436875
+    modified: 1629215395752
     created: 1628515302607
     url: "{{ _.PATH }}"
     name: Editar Preço
@@ -1106,7 +1106,7 @@ resources:
         value: application/json
         id: pair_1b050b07f88543b9abd4ae0e72767e0a
       - id: pair_e4dbeb617a34474a96ae711282e81abd
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -1121,7 +1121,7 @@ resources:
     _type: request
   - _id: req_41b0f496824c432c8728e6a52dd6bd13
     parentId: fld_d1b13aa14b004306b1debdb1acbce937
-    modified: 1628858445914
+    modified: 1629215402363
     created: 1628515302817
     url: "{{ _.BASE_PATH }}/statusJob"
     name: Consultar Dados do Sistema
@@ -1232,7 +1232,7 @@ resources:
     parameters: []
     headers:
       - id: pair_1c61cb2beaa14b6b83f4dafbe2c82323
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -3187,6 +3187,336 @@ resources:
         - resource1
     metaSortKey: -1627928360180.25
     _type: request_group
+  - _id: req_0dc4d06851144a658fd0de980122658c
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629206731052
+    created: 1629202665621
+    url: "{{ _.PATH }}/deposito/"
+    name: Consultar Depósitos
+    description: >-
+      ## Lista os depósitos das lojas ativas ordenado pelos depósitos
+      principais;
+
+
+      ### Filtro Query Params:
+
+
+      * `tipoEstoque`: Id Depósito;
+
+
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 1,
+            "principal": true,
+            "tipo": 1,
+            "deposito": {
+              "id": 1,
+              "nome": "Padrão Site - MATRIZ"
+            },
+            "loja": {
+              "id": 1,
+              "nome": "Casa Ferrari"
+            }
+          },    
+        ]
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_718ef74b027849acbd11bb3818e26ad1
+        name: tipoEstoque
+        value: "1"
+        description: Id do Estoque
+        disabled: true
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371687
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
+    modified: 1629202712018
+    created: 1629202597525
+    name: Estoque Localização
+    description: ""
+    environment:
+      resource: estoqueLocalizacao
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1627928083876.25
+    _type: request_group
+  - _id: req_e6c9ce4ac76e4e11a64ec9038b6ea73b
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629206651064
+    created: 1629204239963
+    url: "{{ _.PATH }}/localizacao"
+    name: Consultar Localizações
+    description: |-
+      ### Ordenação:
+
+      * `descrição`: `asc`;
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 1,
+            "descricao": "A-01-1"
+          },  
+        ]
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371674.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_306de6724eb34b8f86c65113673d5258
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629210343919
+    created: 1629204500106
+    url: "{{ _.PATH }}/deposito/{{
+      _.requests.v2.localizacaoDeposito['primeiro-deposito-id']
+      }}/localizacao/{{
+      _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
+    name: Visualizar Localização
+    description: >-
+      ## 🔍
+
+
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 5862,
+            "estoque": {
+              "produtoDerivacao": {
+                "id": 5022,
+                "codigo": "OXTIGELABRANCO",
+                "descricao": "12 Tigelas Pequenas 16cm 600ml - Branco - Oxford - "
+              },
+              "deposito": {
+                "id": 1,
+                "nome": "Padrão Site - MATRIZ"
+              }
+            },
+            "localizacao": {
+              "id": 1,
+              "descricao": "A-01-1"
+            }
+          },
+        ]
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371668.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_394aad5ea7d146f087b2599ea6eb9a34
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629208256394
+    created: 1629206624581
+    url: "{{ _.PATH }}/deposito/{{
+      _.requests.v2.localizacaoDeposito['primeiro-deposito-id']
+      }}/localizacao/primeira-{{
+      _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
+    name: Excluir Localização
+    description: >-
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 5862,
+            "estoque": {
+              "produtoDerivacao": {
+                "id": 5022,
+                "codigo": "OXTIGELABRANCO",
+                "descricao": "12 Tigelas Pequenas 16cm 600ml - Branco - Oxford - "
+              },
+              "deposito": {
+                "id": 1,
+                "nome": "Padrão Site - MATRIZ"
+              }
+            },
+            "localizacao": {
+              "id": 1,
+              "descricao": "A-01-1"
+            }
+          },
+        ]
+      }
+
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371665.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_96f5498cb8684b1995a54833faeec02b
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629210273181
+    created: 1629207539377
+    url: "{{ _.PATH }}/"
+    name: Adicionar Estoque do Produto na Localização
+    description: >-
+      ### Esquema de validação do JSON de envio:
+
+
+      ```json
+
+      {
+        "title": "Estoque Localização",
+        "type": "object",
+        "properties": {
+          "produtoDerivacao": {
+            "type": "string"
+          },
+          "deposito": {
+            "type": "integer"
+          },
+          "localizacao": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "produtoDerivacao",
+          "deposito",
+          "localizacao"
+        ]
+      }
+
+
+      ```
+
+
+      ### Exemplo do JSON de envio:
+
+
+      ```json
+
+      {
+      	"produtoDerivacao": "{{ _.requests.v1.estoque['primeiro-produto'] }}",
+      	"deposito": {{ _.requests.v1.estoque['primeiro-produto-deposito'] }},
+      	"localizacao": "{{ _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
+      }
+
+      ```
+
+
+
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": "Produto incluso nesta localização, com sucesso!"
+      }
+
+      ```
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"produtoDerivacao": "{{ _.requests.v1.estoque['primeiro-produto'] }}",
+        	"deposito": {{ _.requests.v1.estoque['primeiro-produto-deposito'] }},
+        	"localizacao": "{{ _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_a4eb33138ff849b6ba7527864f70cade
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371663.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_84eef3dc39fe4c3c98e7c404be80a441
     parentId: fld_167ab2be58b04fc8bb25fa49b7e61766
     modified: 1628863388661
@@ -3560,7 +3890,7 @@ resources:
     _type: request_group
   - _id: req_322de5bed4dd4292b847ac0074fb60b4
     parentId: fld_973963dbfc6a45f28b5de48b05b377e7
-    modified: 1628876663617
+    modified: 1629215462887
     created: 1628863861862
     url: "{{ _.PATH }}/{{ _.resource1 }}/callback/1/notification"
     name: Adicionar Notificação Loja
@@ -3590,13 +3920,13 @@ resources:
         }
     parameters: []
     headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_dac9f846412543f08fdf01eb000041d5
       - id: pair_2b2003bec2c04a61a006e6c28f9d64e8
         name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
-      - name: Content-Type
-        value: application/json
-        id: pair_dac9f846412543f08fdf01eb000041d5
     authentication: {}
     metaSortKey: -1628863861862
     isPrivate: false
@@ -3666,7 +3996,7 @@ resources:
     _type: request
   - _id: req_1699b351b7f84c9196962de6973b48e3
     parentId: fld_e12c9f5c7a2446998966e484ac555204
-    modified: 1628863212274
+    modified: 1629215468704
     created: 1628861810810
     url: "{{ _.PATH }}/queryDB"
     name: queryDB
@@ -3689,13 +4019,13 @@ resources:
       text: ""
     parameters: []
     headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_bc84184231ae4ab5a7acd0b6b5b9d08a
       - id: pair_6f705cf2ba394098876008c4e3991d42
         name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
-      - name: Content-Type
-        value: application/json
-        id: pair_bc84184231ae4ab5a7acd0b6b5b9d08a
     authentication: {}
     metaSortKey: -1627910475224.5
     isPrivate: false
@@ -3721,7 +4051,7 @@ resources:
     _type: request_group
   - _id: req_3eef5660e26146c0aca99eef2bc70544
     parentId: fld_2f2d637e53464beab5018daa563a6c83
-    modified: 1628802138806
+    modified: 1629215477967
     created: 1628515302657
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Adicionar Categoria
@@ -4161,7 +4491,7 @@ resources:
     _type: request
   - _id: req_629059e76e3740e1b2120eed5b03b5c6
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1628786722977
+    modified: 1629215491737
     created: 1628515302635
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{ _.requests.v2.pedido['primeiro-pedido']
       }}/observacao"
@@ -4194,7 +4524,7 @@ resources:
         value: application/json
         id: pair_47a14fb273fe43dcbacec3f150bf910c
       - id: pair_0afe1fedecf749428fbfe992ef77631e
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -4222,7 +4552,7 @@ resources:
     _type: request_group
   - _id: req_b2aad2bed4af475aa6075152a1a6deab
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1628786766994
+    modified: 1629215495190
     created: 1628515302627
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Consultar Pedidos
@@ -4324,7 +4654,7 @@ resources:
         disabled: true
     headers:
       - id: pair_9188b00bf1b04ff0aafe7ac48d1b8b78
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -4339,7 +4669,7 @@ resources:
     _type: request
   - _id: req_d75bc60a09ad4c36a2ac29862a0051aa
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1628786729984
+    modified: 1629215498233
     created: 1628515302622
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{ _.requests.v2.pedido['primeiro-pedido']
       }}/situacao"
@@ -4409,7 +4739,7 @@ resources:
         value: application/json
         id: pair_47a14fb273fe43dcbacec3f150bf910c
       - id: pair_599d86cf55e140149ce875fc1ca0d178
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -4424,7 +4754,7 @@ resources:
     _type: request
   - _id: req_6bd0ee4098ab40d29c1cd59b8f586a33
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1628786944998
+    modified: 1629215502744
     created: 1628515302631
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{ _.requests.v2.pedido['primeiro-pedido']
       }}"
@@ -4617,7 +4947,7 @@ resources:
         description: ""
     headers:
       - id: pair_e56bd84c02e4449fa9262a7586abd1bb
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
       - id: pair_fd4b6e4cb9ae49c2981df576fb9119ed
@@ -4637,7 +4967,7 @@ resources:
     _type: request
   - _id: req_8a3849b0fadc43ab924b0a3422109ae7
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1628786743416
+    modified: 1629215506426
     created: 1628515302618
     url: "{{ _.PATH }}/{{ _.resource1 }}/situacao"
     name: Visualizar Situação do Pedido
@@ -4669,7 +4999,7 @@ resources:
         disabled: false
     headers:
       - id: pair_4af6a75583644668af37864bf2040923
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
         disabled: false
@@ -4942,7 +5272,7 @@ resources:
     _type: request
   - _id: req_4f137b7485ca48228645c17711038094
     parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1628791381484
+    modified: 1629215525778
     created: 1628515302683
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Adicionar Produto
@@ -4990,7 +5320,7 @@ resources:
         value: application/json
         id: pair_a8479368ab404c6dbe3a8454adb69a8a
       - id: pair_774b0587f3a040c0bd3470e86fa79b04
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
       - id: pair_5d87a9af0c4b4b978ca5732d9a569804
@@ -5025,7 +5355,7 @@ resources:
     _type: request_group
   - _id: req_a37202e1754842e5b05856ec34a12844
     parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1628787219438
+    modified: 1629215528899
     created: 1628786993671
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Consultar Produtos
@@ -5122,7 +5452,7 @@ resources:
         disabled: true
     headers:
       - id: pair_d4b95d3096ca4883b7ec97c286099785
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
       - id: pair_4d5aaa83c819445baa7c1b0e231c0efc
@@ -5227,7 +5557,7 @@ resources:
     _type: request
   - _id: req_4b271607b3694ab99e5a6ab227229bc9
     parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1628791157486
+    modified: 1629215535442
     created: 1628515302690
     url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
       'req_4f137b7485ca48228645c17711038094', 'b64::JC5kYXRhLmNvZGlnbw==::46b',
@@ -5286,7 +5616,7 @@ resources:
         value: application/json
         id: pair_4e8df8c00bf9432997195e96b7e1b4ad
       - id: pair_45da7b874534464cb7cf306fcbb975fd
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5301,7 +5631,7 @@ resources:
     _type: request
   - _id: req_33e125396568431ca8ae87d8fe0a7cef
     parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1628791114480
+    modified: 1629215326924
     created: 1628515302693
     url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
       'req_4f137b7485ca48228645c17711038094', 'b64::JC5kYXRhLmNvZGlnbw==::46b',
@@ -5323,7 +5653,7 @@ resources:
     parameters: []
     headers:
       - id: pair_bc33b1d0f2ca4967b8df9b3539f7a255
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5338,7 +5668,7 @@ resources:
     _type: request
   - _id: req_7632d394b55b45a9a75c964ef5fd4d0a
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1628797315829
+    modified: 1629215541702
     created: 1628515302699
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}"
@@ -5505,7 +5835,7 @@ resources:
         value: application/json
         id: pair_3bfd470cc97b4a2d815d211db4af4734
       - id: pair_fda34923efd9468f88a6abeef7f0a9db
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5535,7 +5865,7 @@ resources:
     _type: request_group
   - _id: req_9fcf7990f68845d3a0137e42e014ac15
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1628797309441
+    modified: 1629209506999
     created: 1628515302703
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}"
@@ -5581,7 +5911,7 @@ resources:
     parameters: []
     headers:
       - id: pair_0d0dbeaca7b04f6f984446982b1cde9a
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5596,7 +5926,7 @@ resources:
     _type: request
   - _id: req_219c7db972db45e0827548e3b15e0c8a
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1628797302434
+    modified: 1629215546953
     created: 1628515302706
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
@@ -5609,7 +5939,7 @@ resources:
     parameters: []
     headers:
       - id: pair_0d7cc14d48e4418b8fee9cd1f09d1e4d
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5624,7 +5954,7 @@ resources:
     _type: request
   - _id: req_15b163fed7eb4923aa4dbe78e9d7c17d
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1628797321944
+    modified: 1629215549765
     created: 1628515302709
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
@@ -5698,7 +6028,7 @@ resources:
         value: application/json
         id: pair_6ec28751ee834247a61112cc5c4b57dc
       - id: pair_f47485c832394157b1680883c28d41c1
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5713,7 +6043,7 @@ resources:
     _type: request
   - _id: req_e081015ab68443ac86b1e728efde9338
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1628797324133
+    modified: 1629215552652
     created: 1628515302712
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
@@ -5726,7 +6056,7 @@ resources:
     parameters: []
     headers:
       - id: pair_3108d750fed84746a5a09eb3ad96a459
-        name: Authorization
+        name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
@@ -5932,7 +6262,7 @@ resources:
     _type: request
   - _id: env_85e99734ad4246399a6755a906b143dc
     parentId: wrk_38305c2ed92743afa8a958901d003bf5
-    modified: 1629146285041
+    modified: 1629210130109
     created: 1628515302551
     name: Base Environment
     data:
@@ -5961,8 +6291,14 @@ resources:
       requests:
         v1:
           estoque:
-            primeiro-produto: "{% response 'body', 'req_69c2c6531b564945997a096ed4613788',
-              'b64::JC5kYXRhWzBdLnByb2R1dG8=::46b', 'no-history', 60 %}"
+            primeiro-produto-dados: "{% response 'body',
+              'req_69c2c6531b564945997a096ed4613788', 'b64::JC5kYXRhWzBd::46b',
+              'no-history', 60 %}"
+            primeiro-produto: "{% jsonpath _.requests.v1.estoque['primeiro-produto-dados'],
+              'b64::JC5wcm9kdXRv::46b' %}"
+            primeiro-produto-deposito: "{% jsonpath
+              _.requests.v1.estoque['primeiro-produto-dados'],
+              'b64::JC5kZXBvc2l0bw==::46b' %}"
         v2:
           pedido:
             primeiro-pedido: "{% response 'body', 'req_b2aad2bed4af475aa6075152a1a6deab',
@@ -5985,6 +6321,18 @@ resources:
               'b64::JC5pbmRpY2Fkb3Jlc1swXS5pZA==::46b' %}"
             primeiro-indicador: "{% response 'body', 'req_639270747ac04a6bb14c816da84b4253',
               'b64::JC5kYXRhLml0ZW1zWzBdLmlk::46b', 'no-history', 60 %}"
+          localizacaoDeposito:
+            depositos: "{% response 'body', 'req_0dc4d06851144a658fd0de980122658c',
+              'b64::JC5kYXRh::46b', 'no-history', 60 %}"
+            primeiro-deposito-id: "{% jsonpath _.requests.v2.localizacaoDeposito.depositos,
+              'b64::JFswXS5pZA==::46b' %}"
+            segundo-deposito-id: "{% jsonpath _.requests.v2.localizacaoDeposito.depositos,
+              'b64::JFsxXS5pZA==::46b' %}"
+            localizacoes: "{% response 'body', 'req_e6c9ce4ac76e4e11a64ec9038b6ea73b',
+              'b64::JC5kYXRh::46b', 'no-history', 60 %}"
+            primeira-localizacao-descricao: "{% jsonpath
+              _.requests.v2.localizacaoDeposito.localizacoes,
+              'b64::JFswXS5kZXNjcmljYW8=::46b' %}"
       BASE_PATH: "{{ _.BASE_URL }}/{{ _.VERSION }}"
       PATH: "{{ _.BASE_PATH }}/{{ _.resource }}"
     dataPropertyOrder:
@@ -6025,12 +6373,15 @@ resources:
       "&~|requests~|v1":
         - estoque
       "&~|requests~|v1~|estoque":
+        - primeiro-produto-dados
         - primeiro-produto
+        - primeiro-produto-deposito
       "&~|requests~|v2":
         - pedido
         - produto
         - categoria
         - dashboard
+        - localizacaoDeposito
       "&~|requests~|v2~|pedido":
         - primeiro-pedido
         - segundo-pedido
@@ -6043,6 +6394,12 @@ resources:
         - primeiro-painel-id
         - primeiro-painel-filtro-id
         - primeiro-indicador
+      "&~|requests~|v2~|localizacaoDeposito":
+        - depositos
+        - primeiro-deposito-id
+        - segundo-deposito-id
+        - localizacoes
+        - primeira-localizacao-descricao
     color: null
     isPrivate: false
     metaSortKey: 1626869376957
