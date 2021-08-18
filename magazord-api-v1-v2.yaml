@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-17T15:55:52.405Z
+__export_date: 2021-08-18T16:53:09.937Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
   - _id: req_4e64adc404a74514a4f53a5c1b3af57e
@@ -205,80 +205,9 @@ resources:
         - resource
     metaSortKey: -1628106729007
     _type: request_group
-  - _id: req_69c2c6531b564945997a096ed4613788
-    parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1629215360106
-    created: 1628515302592
-    url: "{{ _.BASE_PATH }}/listEstoque"
-    name: Consultar Produtos do Estoque
-    description: >-
-      ## 📦🔁 Lista produtos do estoque
-
-
-      ### Exemplo de retorno
-
-      ```json
-
-      {
-        "data": [
-          {
-            "quantidadeDisponivelVenda": 2,
-            "quantidadeFisica": 2,
-            "quantidadeReservadoSaida": null,
-            "quantidadePrevistaEntrada": null,
-            "quantidadeVirtual": null,
-            "produto": "112317-jariel",
-            "deposito": 1,
-            "custoVirtual": 0,
-            "custoMedio": 100,
-            "descricaoProduto": "Smartphone Samsung Galaxy S10e 128GB G977 Nacional Desbloqueado - Preto Gelo"
-          },
-        ]
-      }
-
-      ```
-    method: GET
-    body: {}
-    parameters:
-      - id: pair_135be427da344614b0a17ad0e73f33e5
-        name: limit
-        value: "10"
-        description: ""
-        disabled: true
-      - id: pair_1b35bfb5c3ee445ba9451f19553bced5
-        name: offset
-        value: "1"
-        description: ""
-        disabled: true
-      - id: pair_b39349a4c8c94a3f9eb44b7a13ad8b81
-        name: produto
-        value: "{{ _.requests.v1.estoque['primeiro-produto'] }}"
-        description: ""
-        disabled: true
-      - id: pair_355238278be940c68b31dd411c398653
-        name: deposito
-        value: "1"
-        description: ""
-        disabled: true
-    headers:
-      - id: pair_ffde28a612d648cc9a6420c0521342a9
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-        disabled: false
-    authentication: {}
-    metaSortKey: 250
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_3701408dcdab4e2cb92abaa4f0d173db
     parentId: fld_153090e18371455c8caca045fa748534
-    modified: 1629215362648
+    modified: 1629220627542
     created: 1628515302595
     url: "{{ _.BASE_PATH }}/listMovimentacaoEstoque"
     name: Consultar Movimentações de Estoque
@@ -346,7 +275,78 @@ resources:
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
-    metaSortKey: 275
+    metaSortKey: -813434719895
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_69c2c6531b564945997a096ed4613788
+    parentId: fld_153090e18371455c8caca045fa748534
+    modified: 1629215360106
+    created: 1628515302592
+    url: "{{ _.BASE_PATH }}/listEstoque"
+    name: Consultar Produtos do Estoque
+    description: >-
+      ## 📦🔁 Lista produtos do estoque
+
+
+      ### Exemplo de retorno
+
+      ```json
+
+      {
+        "data": [
+          {
+            "quantidadeDisponivelVenda": 2,
+            "quantidadeFisica": 2,
+            "quantidadeReservadoSaida": null,
+            "quantidadePrevistaEntrada": null,
+            "quantidadeVirtual": null,
+            "produto": "112317-jariel",
+            "deposito": 1,
+            "custoVirtual": 0,
+            "custoMedio": 100,
+            "descricaoProduto": "Smartphone Samsung Galaxy S10e 128GB G977 Nacional Desbloqueado - Preto Gelo"
+          },
+        ]
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_135be427da344614b0a17ad0e73f33e5
+        name: limit
+        value: "10"
+        description: ""
+        disabled: true
+      - id: pair_1b35bfb5c3ee445ba9451f19553bced5
+        name: offset
+        value: "1"
+        description: ""
+        disabled: true
+      - id: pair_b39349a4c8c94a3f9eb44b7a13ad8b81
+        name: produto
+        value: "{{ _.requests.v1.estoque['primeiro-produto'] }}"
+        description: ""
+        disabled: true
+      - id: pair_355238278be940c68b31dd411c398653
+        name: deposito
+        value: "1"
+        description: ""
+        disabled: true
+    headers:
+      - id: pair_ffde28a612d648cc9a6420c0521342a9
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: 250
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -1257,11 +1257,21 @@ resources:
     _type: request_group
   - _id: req_8df1dc79f3794953bcb9c0c2c608a56c
     parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
-    modified: 1628775590694
+    modified: 1629302978840
     created: 1628775552736
     url: "{{ _.BASE_PATH }}/ping"
     name: Ping
-    description: "## 🏓 Teste se a API está respondendo"
+    description: |-
+      ## 🏓 Teste se a API está respondendo
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": "pong"
+      }
+      ```
     method: GET
     body: {}
     parameters: []
@@ -1333,7 +1343,7 @@ resources:
     _type: request_group
   - _id: req_e7cffea57c904c24a1dd3b307e8959c0
     parentId: fld_fb6392b38d074534b2dcfde43075745f
-    modified: 1628775273372
+    modified: 1629219034963
     created: 1628515302793
     url: "{{ _.PATH }}/login"
     name: Login
@@ -1348,7 +1358,10 @@ resources:
       > Utilize o token retornado para acessar as outras rotas passando-o como `Bearer authorization` ou com o header personalizado `x-zord-token`. Alternativamente, acesse as rotas utilizando `Basic authorization` com o token do usuário do tipo webservice e sua respectiva credencial.
 
 
-      ### Exemplo do JSON de retorno
+      > ### Prefira utilizar por POST e com Authorization Bearer JWT_Token
+
+
+      ### Exemplo do JSON de retorno:
 
       ```json
 
@@ -1370,17 +1383,17 @@ resources:
       mimeType: application/json
       text: |-
         {
-        	"email": "{{ _.credentials.authorization.jwt.email }}",
-        	"senha": "{{ _.credentials.authorization.jwt.pass }}"
+        	"email": "{{ _.jwt_email }}",
+        	"senha": "{{ _.jwt_pass }}"
         }
     parameters:
       - id: pair_56e42e1fefbd436da0789e705bc7fc9e
         name: email
-        value: "{{ _.credentials.authorization.jwt.email }}"
+        value: "{{ _.jwt_email }}"
         description: ""
       - id: pair_7747225c09e1484f901ad97f95aa06c2
         name: senha
-        value: "{{ _.credentials.authorization.jwt.pass }}"
+        value: "{{ _.jwt_pass }}"
         description: ""
     headers:
       - name: Content-Type
@@ -1411,18 +1424,16 @@ resources:
     _type: request_group
   - _id: req_3587a9e813264710b046b0471a1ed136
     parentId: fld_7650133f223c47b49af7fd3c6bc4717b
-    modified: 1629149351627
+    modified: 1629219144170
     created: 1629148215234
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Buscar Características
     description: |-
-      ## 🌳🌳🌳
-
       ### Obervação:
 
       - Não possui filtros.
 
-      ### Exemplo do JSON de resposta:
+      ### Exemplo do JSON de retorno:
 
       ```json
       {
@@ -1484,7 +1495,7 @@ resources:
     _type: request_group
   - _id: req_4aeb0a0228c54f898f6911b2f7787209
     parentId: fld_fa4d69c8d52b4fb4911f9e2dc0bb76d4
-    modified: 1629149021910
+    modified: 1629219134311
     created: 1628515302785
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Buscar Árvore de Categorias
@@ -1495,7 +1506,7 @@ resources:
 
       - Não possui filtros.
 
-      ### Exemplo do JSON de resposta:
+      ### Exemplo do JSON de retorno:
 
       ```json
       {
@@ -1691,222 +1702,9 @@ resources:
         - resource1
     metaSortKey: -1629147757507
     _type: request_group
-  - _id: req_639270747ac04a6bb14c816da84b4253
-    parentId: fld_0b1f4681e4a248468062cb68c507a748
-    modified: 1629149096131
-    created: 1628515302778
-    url: "{{ _.PATH }}/{{ _.resource1 }}/"
-    name: Consultar Indicadores
-    description: |-
-      ### Exemplo do JSON de retorno:
-
-      ```json
-      {
-        "status": "success",
-        "data": {
-          "items": [
-            {
-              "id": 2,
-              "nome": "Análise de Risco",
-              "categoria": {
-                "id": 8,
-                "nome": "Gerais"
-              },
-              "configs": {
-                "filtro": {
-                  "default": {
-                    "dataFinal": "2020-11-30T03:00:00.000Z",
-                    "dataInicio": "2020-11-01T03:00:00.000Z",
-                    "tipoPeriodo": "30DIAS",
-                    "filtroDescricao": "Análise de Risco - Últimos 30 dias"
-                  }
-                },
-                "layouts": [
-                  {
-                    "minH": 2,
-                    "minW": 3,
-                    "width": 12,
-                    "height": 2,
-                    "breakpoint": "xl"
-                  },
-                  {
-                    "minH": 2,
-                    "minW": 3,
-                    "width": 10,
-                    "height": 2,
-                    "breakpoint": "lg"
-                  },
-                  {
-                    "minH": 3,
-                    "minW": 3,
-                    "width": 6,
-                    "height": 3,
-                    "breakpoint": "md"
-                  },
-                  {
-                    "minH": 2,
-                    "minW": 4,
-                    "width": 4,
-                    "height": 2,
-                    "breakpoint": "sm"
-                  },
-                  {
-                    "minH": 3,
-                    "minW": 2,
-                    "width": 2,
-                    "height": 3,
-                    "breakpoint": "xs"
-                  }
-                ]
-              },
-              "visible": true,
-              "sistema": {
-                "id": "MAGAZORD",
-                "name": "MagaZord",
-                "description": "Zord"
-              }
-            },
-          ],
-          "page_count": 39,
-          "page": 1,
-          "limit": 100,
-          "total": 39,
-          "total_pages": 1,
-          "has_more": false
-        }
-      }
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_3175e20f1d4a40a5b744b18299952cfb
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-        disabled: false
-    authentication: {}
-    metaSortKey: -1627929219095
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_0b1f4681e4a248468062cb68c507a748
-    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
-    modified: 1629149194233
-    created: 1628515302770
-    name: Indicador
-    description: ""
-    environment:
-      resource1: indicador
-    environmentPropertyOrder:
-      "&":
-        - resource1
-    metaSortKey: -1629147619788
-    _type: request_group
-  - _id: req_5e758f492fc2434ba955619a7faa1e1a
-    parentId: fld_0b1f4681e4a248468062cb68c507a748
-    modified: 1629149407891
-    created: 1628515302772
-    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
-      _.requests.v2.dashboard['primeiro-indicador'] }}"
-    name: Visualizar Indicador
-    description: |-
-      ## 🔍
-
-      ### Exemplo do JSON de retorno:
-
-      ```json
-      {
-        "status": "success",
-        "data": {
-          "id": 2,
-          "nome": "Análise de Risco",
-          "categoria": {
-            "id": 8,
-            "nome": "Gerais"
-          },
-          "possuiPrivilegio": false,
-          "configs": {
-            "filtro": {
-              "default": {
-                "dataFinal": "2020-11-30T03:00:00.000Z",
-                "dataInicio": "2020-11-01T03:00:00.000Z",
-                "tipoPeriodo": "30DIAS",
-                "filtroDescricao": "Análise de Risco - Últimos 30 dias"
-              }
-            },
-            "layouts": [
-              {
-                "minH": 2,
-                "minW": 3,
-                "width": 12,
-                "height": 2,
-                "breakpoint": "xl"
-              },
-              {
-                "minH": 2,
-                "minW": 3,
-                "width": 10,
-                "height": 2,
-                "breakpoint": "lg"
-              },
-              {
-                "minH": 3,
-                "minW": 3,
-                "width": 6,
-                "height": 3,
-                "breakpoint": "md"
-              },
-              {
-                "minH": 2,
-                "minW": 4,
-                "width": 4,
-                "height": 2,
-                "breakpoint": "sm"
-              },
-              {
-                "minH": 3,
-                "minW": 2,
-                "width": 2,
-                "height": 3,
-                "breakpoint": "xs"
-              }
-            ]
-          },
-          "sistema": {
-            "id": "MAGAZORD",
-            "name": "MagaZord",
-            "description": "Zord"
-          }
-        }
-      }
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_a2fb99dd06db4993ac0449f0006c38e5
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627929084883.75
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_f0de08dab58f471db561caadfc326cf0
     parentId: fld_0b1f4681e4a248468062cb68c507a748
-    modified: 1629149299654
+    modified: 1629224468059
     created: 1628515302775
     url: "{{ _.PATH }}/{{ _.resource1 }}/42/dados"
     name: Buscar Dados do Indicador
@@ -2059,7 +1857,245 @@ resources:
         value: "{{ _.headers.authorization.jwt.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627929058051.5
+    metaSortKey: -1627929219145
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0b1f4681e4a248468062cb68c507a748
+    parentId: fld_5c4b2c0d36cc48c19553353f0d89879e
+    modified: 1629149194233
+    created: 1628515302770
+    name: Indicador
+    description: ""
+    environment:
+      resource1: indicador
+    environmentPropertyOrder:
+      "&":
+        - resource1
+    metaSortKey: -1629147619788
+    _type: request_group
+  - _id: req_639270747ac04a6bb14c816da84b4253
+    parentId: fld_0b1f4681e4a248468062cb68c507a748
+    modified: 1629224370728
+    created: 1628515302778
+    url: "{{ _.PATH }}/{{ _.resource1 }}/"
+    name: Consultar Indicadores
+    description: |-
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "items": [
+            {
+              "id": 2,
+              "nome": "Análise de Risco",
+              "categoria": {
+                "id": 8,
+                "nome": "Gerais"
+              },
+              "configs": {
+                "filtro": {
+                  "default": {
+                    "dataFinal": "2020-11-30T03:00:00.000Z",
+                    "dataInicio": "2020-11-01T03:00:00.000Z",
+                    "tipoPeriodo": "30DIAS",
+                    "filtroDescricao": "Análise de Risco - Últimos 30 dias"
+                  }
+                },
+                "layouts": [
+                  {
+                    "minH": 2,
+                    "minW": 3,
+                    "width": 12,
+                    "height": 2,
+                    "breakpoint": "xl"
+                  },
+                  {
+                    "minH": 2,
+                    "minW": 3,
+                    "width": 10,
+                    "height": 2,
+                    "breakpoint": "lg"
+                  },
+                  {
+                    "minH": 3,
+                    "minW": 3,
+                    "width": 6,
+                    "height": 3,
+                    "breakpoint": "md"
+                  },
+                  {
+                    "minH": 2,
+                    "minW": 4,
+                    "width": 4,
+                    "height": 2,
+                    "breakpoint": "sm"
+                  },
+                  {
+                    "minH": 3,
+                    "minW": 2,
+                    "width": 2,
+                    "height": 3,
+                    "breakpoint": "xs"
+                  }
+                ]
+              },
+              "visible": true,
+              "sistema": {
+                "id": "MAGAZORD",
+                "name": "MagaZord",
+                "description": "Zord"
+              }
+            },
+          ],
+          "page_count": 39,
+          "page": 1,
+          "limit": 100,
+          "total": 39,
+          "total_pages": 1,
+          "has_more": false
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_8a2578afd252431e8d542e432d2c14bc
+        name: limit
+        value: ""
+        description: "Max: 100"
+        disabled: true
+      - id: pair_f7ab0bc9b3a04835865bfa623ca64f4b
+        name: page
+        value: ""
+        description: ""
+        disabled: true
+      - id: pair_658de51b7c344a089f488118f34a5b7b
+        name: order
+        value: ""
+        description: ""
+        disabled: true
+      - id: pair_dd9b7f86f4394a3fa595accda55a52c0
+        name: orderDirection
+        value: ""
+        description: asc | desc
+        disabled: true
+      - id: pair_20f884b5721c492081659efac9fd81cb
+        name: name
+        value: ""
+        description: Nome do indicador
+        disabled: true
+    headers:
+      - id: pair_3175e20f1d4a40a5b744b18299952cfb
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1627929219095
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5e758f492fc2434ba955619a7faa1e1a
+    parentId: fld_0b1f4681e4a248468062cb68c507a748
+    modified: 1629149407891
+    created: 1628515302772
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.dashboard['primeiro-indicador'] }}"
+    name: Visualizar Indicador
+    description: |-
+      ## 🔍
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": {
+          "id": 2,
+          "nome": "Análise de Risco",
+          "categoria": {
+            "id": 8,
+            "nome": "Gerais"
+          },
+          "possuiPrivilegio": false,
+          "configs": {
+            "filtro": {
+              "default": {
+                "dataFinal": "2020-11-30T03:00:00.000Z",
+                "dataInicio": "2020-11-01T03:00:00.000Z",
+                "tipoPeriodo": "30DIAS",
+                "filtroDescricao": "Análise de Risco - Últimos 30 dias"
+              }
+            },
+            "layouts": [
+              {
+                "minH": 2,
+                "minW": 3,
+                "width": 12,
+                "height": 2,
+                "breakpoint": "xl"
+              },
+              {
+                "minH": 2,
+                "minW": 3,
+                "width": 10,
+                "height": 2,
+                "breakpoint": "lg"
+              },
+              {
+                "minH": 3,
+                "minW": 3,
+                "width": 6,
+                "height": 3,
+                "breakpoint": "md"
+              },
+              {
+                "minH": 2,
+                "minW": 4,
+                "width": 4,
+                "height": 2,
+                "breakpoint": "sm"
+              },
+              {
+                "minH": 3,
+                "minW": 2,
+                "width": 2,
+                "height": 3,
+                "breakpoint": "xs"
+              }
+            ]
+          },
+          "sistema": {
+            "id": "MAGAZORD",
+            "name": "MagaZord",
+            "description": "Zord"
+          }
+        }
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_a2fb99dd06db4993ac0449f0006c38e5
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627929084883.75
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -2402,10 +2438,10 @@ resources:
     _type: request_group
   - _id: req_a92f746187d64be5a542c3f7d8b8e50f
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628879122372
+    modified: 1629219401754
     created: 1628515302742
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
-    name: Consultar Paineis
+    name: Consultar Painéis
     description: |-
       ## Retorna os paineis do usuário da autenticação.
 
@@ -2540,7 +2576,7 @@ resources:
     _type: request
   - _id: req_85511ea5bb884b3f8e3eeecd84cfac26
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628889623116
+    modified: 1629219455371
     created: 1628515302751
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.dashboard['primeiro-painel-id'] }}"
@@ -2684,6 +2720,19 @@ resources:
       }
 
       ```
+
+
+      ### Exemplo do JSON de retorno: 
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": "Painel alterado com sucesso!"
+      }
+
+      ```
     method: PUT
     body:
       mimeType: application/json
@@ -2732,25 +2781,58 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_24d8137e43694b549ba91848c9cadeb1
+    parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
+    modified: 1629220597142
+    created: 1628515302757
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
+      'req_5498084f46164634bd4c0639198a20a0', 'b64::JC5kYXRhLmlk::46b',
+      'always', 60 %}"
+    name: Excluir Painel
+    description: |-
+      ## ❌
+
+      ### Exemplo do JSON de retorno: 
+
+      ```json
+      {
+        "status": "success",
+        "data": "Painel excluído com sucesso!"
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_41581014e1d345edb07087767e17481f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627929004358.875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_953923b7a1204d02812a1a40251756fa
     parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1629142942799
+    modified: 1629219490514
     created: 1628515302744
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.dashboard['primeiro-painel-id'] }}"
     name: Visualizar Painel
-    description: >-
+    description: |-
       ## Visualizar o painel do usuário da autentiação
 
-
-      * Usuarios administradores master podem ver qualquer id informado que exista.
-
+      * Usuarios administradores master podem ver qualquer painel existente.
 
       ### Exemplo do JSON de retorno:
 
-
       ```json
-
       {
         "status": "success",
         "data": {
@@ -2822,7 +2904,6 @@ resources:
           }
         }
       }
-
       ```
     method: GET
     body: {}
@@ -2842,51 +2923,22 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_24d8137e43694b549ba91848c9cadeb1
-    parentId: fld_91d3d3ffeb63435a8a5e17e7a7dcf9b2
-    modified: 1628886184685
-    created: 1628515302757
-    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
-      'req_5498084f46164634bd4c0639198a20a0', 'b64::JC5kYXRhLmlk::46b',
-      'always', 60 %}"
-    name: Excluir Painel
-    description: |-
-      ## ❌
-
-      ### Exemplo do JSON de retorno: 
-
-      ```json
-      {
-        "status": "success",
-        "data": "Painel excluído com sucesso!"
-      }
-      ```
-    method: DELETE
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_41581014e1d345edb07087767e17481f
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627929004262
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_04804e06c70a47ba8abde998ca688158
     parentId: fld_5ba3f1777b06456c8201e8768e9fc3fd
-    modified: 1629145976436
+    modified: 1629222353581
     created: 1628515302754
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.dashboard['primeiro-painel-id'] }}/{{ _.resource2 }}"
     name: Editar Filtros
-    description: ""
+    description: |-
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": "Filtros registrados com sucesso!"
+      }
+      ```
     method: PUT
     body:
       mimeType: application/json
@@ -2931,13 +2983,13 @@ resources:
     _type: request_group
   - _id: req_803df12c65f640328b3b7b1c713421c9
     parentId: fld_5ba3f1777b06456c8201e8768e9fc3fd
-    modified: 1629145309941
+    modified: 1629222371399
     created: 1628515302760
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.dashboard['primeiro-painel-id'] }}/{{ _.resource2 }}/{{
       _.requests.v2.dashboard['primeiro-painel-filtro-id'] }}"
     name: Excluir Filtro do Indicador
-    description: ""
+    description: "### Sem retorno"
     method: DELETE
     body: {}
     parameters: []
@@ -2958,7 +3010,7 @@ resources:
     _type: request
   - _id: req_2bf471e50e4049b8ac6ca4b8a515266c
     parentId: fld_5021658a15bc43d59640c9bddd451aba
-    modified: 1629149599644
+    modified: 1629219529665
     created: 1629149009837
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Consultar Regiões
@@ -2969,7 +3021,7 @@ resources:
 
       - Não possui filtros.
 
-      ### Exemplo do JSON de resposta:
+      ### Exemplo do JSON de retorno:
 
       ```json
       {
@@ -3040,7 +3092,7 @@ resources:
     _type: request_group
   - _id: req_6ed178786ee24b0ebb5887a8d18fbd39
     parentId: fld_f1e8388f997c4d08b677afbb8dc0fda8
-    modified: 1629149701567
+    modified: 1629219542817
     created: 1629149571002
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Consultar Estados
@@ -3051,7 +3103,7 @@ resources:
 
       - Não possui filtros.
 
-      ### Exemplo do JSON de resposta:
+      ### Exemplo do JSON de retorno:
 
       ```json
       {  
@@ -3111,7 +3163,7 @@ resources:
     _type: request_group
   - _id: req_34ef2b45dc9d479a8032f9609fa9789e
     parentId: fld_624ee4b348dd497cb1ffb4c04131bea2
-    modified: 1629149839643
+    modified: 1629219548742
     created: 1629149741073
     url: "{{ _.PATH }}/{{ _.resource1 }}/"
     name: Consultar Transportadoras
@@ -3122,7 +3174,7 @@ resources:
 
       - Não possui filtros.
 
-      ### Exemplo do JSON de resposta:
+      ### Exemplo do JSON de retorno:
 
       ```json
       {  
@@ -3187,248 +3239,9 @@ resources:
         - resource1
     metaSortKey: -1627928360180.25
     _type: request_group
-  - _id: req_0dc4d06851144a658fd0de980122658c
-    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
-    modified: 1629206731052
-    created: 1629202665621
-    url: "{{ _.PATH }}/deposito/"
-    name: Consultar Depósitos
-    description: >-
-      ## Lista os depósitos das lojas ativas ordenado pelos depósitos
-      principais;
-
-
-      ### Filtro Query Params:
-
-
-      * `tipoEstoque`: Id Depósito;
-
-
-      ### Exemplo do JSON de retorno:
-
-
-      ```json
-
-      {
-        "status": "success",
-        "data": [
-          {
-            "id": 1,
-            "principal": true,
-            "tipo": 1,
-            "deposito": {
-              "id": 1,
-              "nome": "Padrão Site - MATRIZ"
-            },
-            "loja": {
-              "id": 1,
-              "nome": "Casa Ferrari"
-            }
-          },    
-        ]
-      }
-
-      ```
-    method: GET
-    body: {}
-    parameters:
-      - id: pair_718ef74b027849acbd11bb3818e26ad1
-        name: tipoEstoque
-        value: "1"
-        description: Id do Estoque
-        disabled: true
-    headers:
-      - id: pair_1577a18200814a1897bc427e6c237c0f
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627674371687
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_259ccaf3cebd45e49fa7b3f378e328a4
-    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
-    modified: 1629202712018
-    created: 1629202597525
-    name: Estoque Localização
-    description: ""
-    environment:
-      resource: estoqueLocalizacao
-    environmentPropertyOrder:
-      "&":
-        - resource
-    metaSortKey: -1627928083876.25
-    _type: request_group
-  - _id: req_e6c9ce4ac76e4e11a64ec9038b6ea73b
-    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
-    modified: 1629206651064
-    created: 1629204239963
-    url: "{{ _.PATH }}/localizacao"
-    name: Consultar Localizações
-    description: |-
-      ### Ordenação:
-
-      * `descrição`: `asc`;
-
-      ### Exemplo do JSON de retorno:
-
-      ```json
-      {
-        "status": "success",
-        "data": [
-          {
-            "id": 1,
-            "descricao": "A-01-1"
-          },  
-        ]
-      }
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_1577a18200814a1897bc427e6c237c0f
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627674371674.5
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_306de6724eb34b8f86c65113673d5258
-    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
-    modified: 1629210343919
-    created: 1629204500106
-    url: "{{ _.PATH }}/deposito/{{
-      _.requests.v2.localizacaoDeposito['primeiro-deposito-id']
-      }}/localizacao/{{
-      _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
-    name: Visualizar Localização
-    description: >-
-      ## 🔍
-
-
-      ### Exemplo do JSON de retorno:
-
-
-      ```json
-
-      {
-        "status": "success",
-        "data": [
-          {
-            "id": 5862,
-            "estoque": {
-              "produtoDerivacao": {
-                "id": 5022,
-                "codigo": "OXTIGELABRANCO",
-                "descricao": "12 Tigelas Pequenas 16cm 600ml - Branco - Oxford - "
-              },
-              "deposito": {
-                "id": 1,
-                "nome": "Padrão Site - MATRIZ"
-              }
-            },
-            "localizacao": {
-              "id": 1,
-              "descricao": "A-01-1"
-            }
-          },
-        ]
-      }
-
-      ```
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_1577a18200814a1897bc427e6c237c0f
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627674371668.25
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_394aad5ea7d146f087b2599ea6eb9a34
-    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
-    modified: 1629208256394
-    created: 1629206624581
-    url: "{{ _.PATH }}/deposito/{{
-      _.requests.v2.localizacaoDeposito['primeiro-deposito-id']
-      }}/localizacao/primeira-{{
-      _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
-    name: Excluir Localização
-    description: >-
-      ### Exemplo do JSON de retorno:
-
-
-      ```json
-
-      {
-        "status": "success",
-        "data": [
-          {
-            "id": 5862,
-            "estoque": {
-              "produtoDerivacao": {
-                "id": 5022,
-                "codigo": "OXTIGELABRANCO",
-                "descricao": "12 Tigelas Pequenas 16cm 600ml - Branco - Oxford - "
-              },
-              "deposito": {
-                "id": 1,
-                "nome": "Padrão Site - MATRIZ"
-              }
-            },
-            "localizacao": {
-              "id": 1,
-              "descricao": "A-01-1"
-            }
-          },
-        ]
-      }
-
-      ```
-    method: DELETE
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_1577a18200814a1897bc427e6c237c0f
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.jwt.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627674371665.125
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_96f5498cb8684b1995a54833faeec02b
     parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
-    modified: 1629210273181
+    modified: 1629220577713
     created: 1629207539377
     url: "{{ _.PATH }}/"
     name: Adicionar Estoque do Produto na Localização
@@ -3508,7 +3321,246 @@ resources:
         value: "{{ _.headers.authorization.jwt.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627674371663.5625
+    metaSortKey: -1627674371737
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    parentId: fld_0514b724a3d24670a19cf0d3bbfd2907
+    modified: 1629202712018
+    created: 1629202597525
+    name: Estoque Localização
+    description: ""
+    environment:
+      resource: estoqueLocalizacao
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1627928083876.25
+    _type: request_group
+  - _id: req_0dc4d06851144a658fd0de980122658c
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629222400996
+    created: 1629202665621
+    url: "{{ _.PATH }}/deposito/"
+    name: Buscar Depósitos
+    description: >-
+      ## Lista os depósitos das lojas ativas ordenado pelos depósitos
+      principais;
+
+
+      ### Filtro Query Params:
+
+
+      * `tipoEstoque`: Id Depósito;
+
+
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 1,
+            "principal": true,
+            "tipo": 1,
+            "deposito": {
+              "id": 1,
+              "nome": "Padrão Site - MATRIZ"
+            },
+            "loja": {
+              "id": 1,
+              "nome": "Casa Ferrari"
+            }
+          },    
+        ]
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_718ef74b027849acbd11bb3818e26ad1
+        name: tipoEstoque
+        value: "1"
+        description: Id do Estoque
+        disabled: true
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371687
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e6c9ce4ac76e4e11a64ec9038b6ea73b
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629222393834
+    created: 1629204239963
+    url: "{{ _.PATH }}/localizacao"
+    name: Buscar Localizações
+    description: |-
+      ### Ordenação:
+
+      * `descrição`: `asc`;
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 1,
+            "descricao": "A-01-1"
+          },  
+        ]
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371674.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_394aad5ea7d146f087b2599ea6eb9a34
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629220575928
+    created: 1629206624581
+    url: "{{ _.PATH }}/deposito/{{
+      _.requests.v2.localizacaoDeposito['primeiro-deposito-id']
+      }}/localizacao/primeira-{{
+      _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
+    name: Excluir Localização
+    description: >-
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 5862,
+            "estoque": {
+              "produtoDerivacao": {
+                "id": 5022,
+                "codigo": "OXTIGELABRANCO",
+                "descricao": "12 Tigelas Pequenas 16cm 600ml - Branco - Oxford - "
+              },
+              "deposito": {
+                "id": 1,
+                "nome": "Padrão Site - MATRIZ"
+              }
+            },
+            "localizacao": {
+              "id": 1,
+              "descricao": "A-01-1"
+            }
+          },
+        ]
+      }
+
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371671.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_306de6724eb34b8f86c65113673d5258
+    parentId: fld_259ccaf3cebd45e49fa7b3f378e328a4
+    modified: 1629210343919
+    created: 1629204500106
+    url: "{{ _.PATH }}/deposito/{{
+      _.requests.v2.localizacaoDeposito['primeiro-deposito-id']
+      }}/localizacao/{{
+      _.requests.v2.localizacaoDeposito['primeira-localizacao-descricao'] }}"
+    name: Visualizar Localização
+    description: >-
+      ## 🔍
+
+
+      ### Exemplo do JSON de retorno:
+
+
+      ```json
+
+      {
+        "status": "success",
+        "data": [
+          {
+            "id": 5862,
+            "estoque": {
+              "produtoDerivacao": {
+                "id": 5022,
+                "codigo": "OXTIGELABRANCO",
+                "descricao": "12 Tigelas Pequenas 16cm 600ml - Branco - Oxford - "
+              },
+              "deposito": {
+                "id": 1,
+                "nome": "Padrão Site - MATRIZ"
+              }
+            },
+            "localizacao": {
+              "id": 1,
+              "descricao": "A-01-1"
+            }
+          },
+        ]
+      }
+
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_1577a18200814a1897bc427e6c237c0f
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.jwt.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627674371668.25
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -3965,7 +4017,7 @@ resources:
     _type: request_group
   - _id: req_87ace2d1558740c9b7c51f9999b69947
     parentId: fld_973963dbfc6a45f28b5de48b05b377e7
-    modified: 1628876544026
+    modified: 1629219622319
     created: 1628863781742
     url: "{{ _.PATH }}/{{ _.resource1
       }}/callback/1/seller/07877857837/products/123/skus/{{
@@ -4253,12 +4305,12 @@ resources:
     _type: request
   - _id: req_1230aecff50045af902933e87c1ef347
     parentId: fld_2f2d637e53464beab5018daa563a6c83
-    modified: 1628802206625
+    modified: 1629220513996
     created: 1628515302660
     url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
       'req_3eef5660e26146c0aca99eef2bc70544', 'b64::JC5kYXRhLmlk::46b',
       'always', 60 %}"
-    name: Deletar Categoria
+    name: Excluir Categoria
     description: |-
       ## ❌
 
@@ -4290,35 +4342,12 @@ resources:
     _type: request
   - _id: req_f0a4bdbb1cc7412692100c94fbec35d4
     parentId: fld_a19794cbe74d4c17bb6a6ae5ddd7619a
-    modified: 1628800249476
+    modified: 1629223444170
     created: 1628798785878
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Adicionar Cupom de Desconto
     description: >-
       ## ➕🏷💲🤑
-
-
-      ### Exemplo do JSON de envio:
-
-
-      ```json
-
-      {
-      	"codigo": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'alphaNumeric', '', '32', 'en' %}",
-      	"descricao": "Descontinho {% faker 'commerce', '', 'productAdjective', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} Show",
-      	"tipoDesconto": 1,
-      	"valorDesconto": 10,
-      	"loja": 1
-      }
-
-      ```
-
-
-      1. Código opcional e até 32 caracteres;
-        1. O Código deve ser único.
-
-        
-      2. Tipo 1 = TIPO_DESCONTO_VALOR | 2 = TIPO_DESCONTO_PERCENTUAL;
 
 
       ### Esquema de validação do JSON de envio:
@@ -4380,6 +4409,29 @@ resources:
       }
 
       ```
+
+
+      ### Exemplo do JSON de envio:
+
+
+      ```json
+
+      {
+      	"codigo": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'alphaNumeric', '', '32', 'en' %}",
+      	"descricao": "Descontinho {% faker 'commerce', '', 'productAdjective', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} Show",
+      	"tipoDesconto": 1,
+      	"valorDesconto": 10,
+      	"loja": 1
+      }
+
+      ```
+
+
+      1. Código opcional e até 32 caracteres;
+        1. O Código deve ser único.
+
+        
+      2. Tipo 1 = TIPO_DESCONTO_VALOR | 2 = TIPO_DESCONTO_PERCENTUAL;
 
 
       ### Exemplo do JSON de retorno:
@@ -4491,11 +4543,11 @@ resources:
     _type: request
   - _id: req_629059e76e3740e1b2120eed5b03b5c6
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1629215491737
+    modified: 1629222439758
     created: 1628515302635
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{ _.requests.v2.pedido['primeiro-pedido']
       }}/observacao"
-    name: Criar Observação Pedido
+    name: Adicionar Observação Pedido
     description: |
       ## 📦📋✍ Adiciona uma observação em um pedido
 
@@ -4528,7 +4580,7 @@ resources:
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627671348642
+    metaSortKey: -1627671348742
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -4552,7 +4604,7 @@ resources:
     _type: request_group
   - _id: req_b2aad2bed4af475aa6075152a1a6deab
     parentId: fld_7b581130aee14e4e866d4c00540c40f1
-    modified: 1629215495190
+    modified: 1629220492682
     created: 1628515302627
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Consultar Pedidos
@@ -4658,7 +4710,7 @@ resources:
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627671348617
+    metaSortKey: -1627671348692
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -5355,12 +5407,41 @@ resources:
     _type: request_group
   - _id: req_a37202e1754842e5b05856ec34a12844
     parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1629215528899
+    modified: 1629220014443
     created: 1628786993671
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Consultar Produtos
     description: |-
       ## 📦📦📦
+
+      ### Esquema de validação do JSON de envio:
+
+      ```json
+      {
+        "title": "Consulta de Produtos",
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "default": 1
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 100,
+            "default": 100
+          },
+          "order": {
+            "type": "string",
+            "enum": ["id", "nome"],
+            "default": "id"
+          },
+          "orderDirection": {
+            "type": "string",
+            "enum": ["asc", "desc"]
+          }
+        }
+      }
+      ```
 
       ### Exemplo do JSON de retorno:
 
@@ -5397,35 +5478,6 @@ resources:
           "total": 2544,
           "total_pages": 255,
           "has_more": true
-        }
-      }
-      ```
-
-      ### Esquema de validação do JSON de envio:
-
-      ```json
-      {
-        "title": "Consulta de Produtos",
-        "type": "object",
-        "properties": {
-          "page": {
-            "type": "integer",
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "maximum": 100,
-            "default": 100
-          },
-          "order": {
-            "type": "string",
-            "enum": ["id", "nome"],
-            "default": "id"
-          },
-          "orderDirection": {
-            "type": "string",
-            "enum": ["asc", "desc"]
-          }
         }
       }
       ```
@@ -5470,9 +5522,120 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
+  - _id: req_4b271607b3694ab99e5a6ab227229bc9
+    parentId: fld_b2387cb651d940b2992651baee6a4df6
+    modified: 1629223386565
+    created: 1628515302690
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
+      'req_4f137b7485ca48228645c17711038094', 'b64::JC5kYXRhLmNvZGlnbw==::46b',
+      'always', 60 %}"
+    name: Editar Produto
+    description: |-
+      ## 📦🔄
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": "Produto atualizado com sucesso."
+      }
+      ```
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {	
+        	"nome": "Produto de Teste PUT - API",
+        	"marca": 38,
+        	"modelo": "Modelo de Teste - PUT",
+        	"acompanha": "Acompanha produtos X, Y e Z - PUT",
+        	"palavraChave": "teste, teste1, teste2, teste3, PUT",
+        	"peso": 0.180,
+        	"altura": 30.50,
+        	"largura": 40.15,
+        	"comprimento": 10.25,
+        	"unidadeMedida": "PC",
+        	"origemFiscal": 1,
+        	"ativo": true,
+        	"derivacoes": [
+        		2
+        	],
+        	"categorias": [
+        		7
+        	],
+        	"ncm": "96140000",
+        	"cest": "101700",
+        	"produtoLoja": [
+        		{
+        			"loja": 1,
+        			"titulo": "Produto de Teste - PUT",
+        			"tituloComplemento": "Produto de Teste Complemento - PUT",
+        			"descricao": "Teste de produto via API- PUT",
+        			"descricaoResumida": "Teste de produto via API - PUT"
+        		}
+        	],
+        	"dataLancamento": "2021-09-24T14:15:22Z"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4e8df8c00bf9432997195e96b7e1b4ad
+      - id: pair_45da7b874534464cb7cf306fcbb975fd
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627907831794.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_33e125396568431ca8ae87d8fe0a7cef
+    parentId: fld_b2387cb651d940b2992651baee6a4df6
+    modified: 1629223282075
+    created: 1628515302693
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
+      'req_4f137b7485ca48228645c17711038094', 'b64::JC5kYXRhLmNvZGlnbw==::46b',
+      'always', 60 %}"
+    name: Excluir Produto
+    description: |-
+      ## 📦❌
+
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": "Produto excluído com sucesso."
+      }
+      ```
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_bc33b1d0f2ca4967b8df9b3539f7a255
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627907831725.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_1639d2c082ab4eb6bb31d6a106ae0a0a
     parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1628788133680
+    modified: 1629220454027
     created: 1628515302686
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}"
@@ -5546,118 +5709,7 @@ resources:
         value: "{{ _.headers.authorization.value }}"
         description: ""
     authentication: {}
-    metaSortKey: -1627907831782
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_4b271607b3694ab99e5a6ab227229bc9
-    parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1629215535442
-    created: 1628515302690
-    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
-      'req_4f137b7485ca48228645c17711038094', 'b64::JC5kYXRhLmNvZGlnbw==::46b',
-      'always', 60 %}"
-    name: Editar Produto
-    description: |-
-      ## 📦🔄
-
-      ### Exemplo do JSON de responsta:
-
-      ```json
-      {
-        "status": "success",
-        "data": "Produto atualizado com sucesso."
-      }
-      ```
-    method: PUT
-    body:
-      mimeType: application/json
-      text: |-
-        {	
-        	"nome": "Produto de Teste PUT - API",
-        	"marca": 38,
-        	"modelo": "Modelo de Teste - PUT",
-        	"acompanha": "Acompanha produtos X, Y e Z - PUT",
-        	"palavraChave": "teste, teste1, teste2, teste3, PUT",
-        	"peso": 0.180,
-        	"altura": 30.50,
-        	"largura": 40.15,
-        	"comprimento": 10.25,
-        	"unidadeMedida": "PC",
-        	"origemFiscal": 1,
-        	"ativo": true,
-        	"derivacoes": [
-        		2
-        	],
-        	"categorias": [
-        		7
-        	],
-        	"ncm": "96140000",
-        	"cest": "101700",
-        	"produtoLoja": [
-        		{
-        			"loja": 1,
-        			"titulo": "Produto de Teste - PUT",
-        			"tituloComplemento": "Produto de Teste Complemento - PUT",
-        			"descricao": "Teste de produto via API- PUT",
-        			"descricaoResumida": "Teste de produto via API - PUT"
-        		}
-        	],
-        	"dataLancamento": "2021-09-24T14:15:22Z"
-        }
-    parameters: []
-    headers:
-      - name: Content-Type
-        value: application/json
-        id: pair_4e8df8c00bf9432997195e96b7e1b4ad
-      - id: pair_45da7b874534464cb7cf306fcbb975fd
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627907831732
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_33e125396568431ca8ae87d8fe0a7cef
-    parentId: fld_b2387cb651d940b2992651baee6a4df6
-    modified: 1629215326924
-    created: 1628515302693
-    url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
-      'req_4f137b7485ca48228645c17711038094', 'b64::JC5kYXRhLmNvZGlnbw==::46b',
-      'always', 60 %}"
-    name: Deletar Produto
-    description: |-
-      ## 📦❌
-
-      ### Exemplo do JSON de resposta:
-
-      ```json
-      {
-        "status": "success",
-        "data": "Produto excluído com sucesso."
-      }
-      ```
-    method: DELETE
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_bc33b1d0f2ca4967b8df9b3539f7a255
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627907831682
+    metaSortKey: -1627907831657
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -5668,41 +5720,12 @@ resources:
     _type: request
   - _id: req_7632d394b55b45a9a75c964ef5fd4d0a
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1629215541702
+    modified: 1629220374506
     created: 1628515302699
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}"
-    name: Adicionar Derivação
+    name: Adicionar Produto Derivação
     description: >
-      ### Exemplo do JSON de envio:
-
-
-      ```json
-
-      {
-      	"codigo": "PROD_PAI_COD - {% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '12345', 'pt_BR' %}",
-      	"nome": "{% faker 'commerce', '', 'productName', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} - API",
-      	"peso": 0.260,
-      	"altura": 16.15,
-      	"largura": 17.15,
-      	"comprimento": 25.30,
-      	"ativo": true,
-      	"ean": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '782940199417', 'en' %}",
-      	"derivacoes": [
-      		{
-      			"derivacao": 1,
-      			"valor": "Azul"
-      		}
-      	],
-      	"lojas": [
-      		1
-      	]
-      }
-
-      ```
-
-
-
       ### Esquema de validação do JSON de envio:
 
 
@@ -5779,6 +5802,34 @@ resources:
       ```
 
 
+      ### Exemplo do JSON de envio:
+
+
+      ```json
+
+      {
+      	"codigo": "PROD_PAI_COD - {% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '12345', 'pt_BR' %}",
+      	"nome": "{% faker 'commerce', '', 'productName', '', '', '', '', '', '', '', '', '', '', '', '', '', 'pt_BR' %} - API",
+      	"peso": 0.260,
+      	"altura": 16.15,
+      	"largura": 17.15,
+      	"comprimento": 25.30,
+      	"ativo": true,
+      	"ean": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '782940199417', 'en' %}",
+      	"derivacoes": [
+      		{
+      			"derivacao": 1,
+      			"valor": "Azul"
+      		}
+      	],
+      	"lojas": [
+      		1
+      	]
+      }
+
+      ```
+
+
       ### Exemplo do JSON de retorno:
 
 
@@ -5788,14 +5839,14 @@ resources:
       {
         "status": "success",
         "data": {
-          "nome": "Fantastic Plastic Table - API",
-          "codigo": "01-JARIEL - 15013",
+          "nome": "Some Product - API",
+          "codigo": "Some-Product-API-{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '', 'pt_BR' %}",
           "peso": 0.26,
           "altura": 16.15,
           "largura": 17.15,
           "comprimento": 25.3,
           "ativo": true,
-          "ean": "762988505624",
+          "ean": "{% faker 'random', '', '', '', '', '', '', '', '', '', '', '', '', 'number', '', '1234567890123', 'pt_BR' %}",
           "derivacoes": [
             {
               "derivacao": 3,
@@ -5865,12 +5916,16 @@ resources:
     _type: request_group
   - _id: req_9fcf7990f68845d3a0137e42e014ac15
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1629209506999
+    modified: 1629223780672
     created: 1628515302703
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}"
-    name: Consultar Derivação
+    name: Buscar Produto Derivação
     description: |-
+      ### Observações:
+
+      * Não possui filtros.
+
       ### Exemplo do JSON de retorno:
 
       ```json
@@ -5924,43 +5979,15 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_219c7db972db45e0827548e3b15e0c8a
-    parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1629215546953
-    created: 1628515302706
-    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
-      _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
-      'body', 'req_7632d394b55b45a9a75c964ef5fd4d0a',
-      'b64::JC5kYXRhLmNvZGlnbw==::46b', 'no-history', 60 %}"
-    name: Visualizar Derivação
-    description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers:
-      - id: pair_0d7cc14d48e4418b8fee9cd1f09d1e4d
-        name: "{{ _.headers.authorization.key }}"
-        value: "{{ _.headers.authorization.value }}"
-        description: ""
-    authentication: {}
-    metaSortKey: -1627908305480
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
   - _id: req_15b163fed7eb4923aa4dbe78e9d7c17d
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1629215549765
+    modified: 1629220387809
     created: 1628515302709
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
       'body', 'req_7632d394b55b45a9a75c964ef5fd4d0a',
       'b64::JC5kYXRhLmNvZGlnbw==::46b', 'always', 60 %}"
-    name: Alterar Derivação
+    name: Editar Produto Derivação
     description: >-
       ### Exemplo do JSON de envio:
 
@@ -6043,19 +6070,55 @@ resources:
     _type: request
   - _id: req_e081015ab68443ac86b1e728efde9338
     parentId: fld_748dfe68237c42acae51238aea251453
-    modified: 1629215552652
+    modified: 1629223351709
     created: 1628515302712
     url: "{{ _.PATH }}/{{ _.resource1 }}/{{
       _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
       'body', 'req_7632d394b55b45a9a75c964ef5fd4d0a',
       'b64::JC5kYXRhLmNvZGlnbw==::46b', 'always', 60 %}"
-    name: Excluir Derivação
-    description: ""
+    name: Excluir Produto Derivação
+    description: |-
+      ### Exemplo do JSON de retorno:
+
+      ```json
+      {
+        "status": "success",
+        "data": "Derivação excluída com sucesso."
+      }
+      ```
     method: DELETE
     body: {}
     parameters: []
     headers:
       - id: pair_3108d750fed84746a5a09eb3ad96a459
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627908305405
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_219c7db972db45e0827548e3b15e0c8a
+    parentId: fld_748dfe68237c42acae51238aea251453
+    modified: 1629220474555
+    created: 1628515302706
+    url: "{{ _.PATH }}/{{ _.resource1 }}/{{
+      _.requests.v2.produto['primeiro-produto'] }}/{{ _.resource2 }}/{% response
+      'body', 'req_7632d394b55b45a9a75c964ef5fd4d0a',
+      'b64::JC5kYXRhLmNvZGlnbw==::46b', 'no-history', 60 %}"
+    name: Visualizar Produto Derivação
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_0d7cc14d48e4418b8fee9cd1f09d1e4d
         name: "{{ _.headers.authorization.key }}"
         value: "{{ _.headers.authorization.value }}"
         description: ""
@@ -6158,7 +6221,7 @@ resources:
     _type: request_group
   - _id: req_bf8b8ad6d4d142c5a20142ac92b71591
     parentId: fld_ced5cdba13de4e2481740d59b07402a0
-    modified: 1628861637940
+    modified: 1629223298763
     created: 1628515302720
     url: "{{ _.PATH }}/{{ _.resource1 }}"
     name: Consultar Marcas
@@ -6166,7 +6229,7 @@ resources:
       ## 🔍
 
 
-      ## Exemplo do JSON de retorno:
+      ### Exemplo do JSON de retorno:
 
       ```json
       {
@@ -6225,12 +6288,12 @@ resources:
     _type: request
   - _id: req_d42c380665fd42cfbc2acd158b647093
     parentId: fld_ced5cdba13de4e2481740d59b07402a0
-    modified: 1628861578236
+    modified: 1629220526575
     created: 1628515302727
     url: "{{ _.PATH }}/{{ _.resource1 }}/{% response 'body',
       'req_9ac6464b89a14d47b6ba4b38a3b86847', 'b64::JC5kYXRhLmlk::46b',
       'always', 60 %}"
-    name: Deletar Marca
+    name: Excluir Marca
     description: |-
       ## ❌
 
@@ -6262,26 +6325,27 @@ resources:
     _type: request
   - _id: env_85e99734ad4246399a6755a906b143dc
     parentId: wrk_38305c2ed92743afa8a958901d003bf5
-    modified: 1629210130109
+    modified: 1629302936013
     created: 1628515302551
     name: Base Environment
     data:
-      credentials:
-        authorization:
-          basic:
-            user: 4694e702950c9d0e887b6a9e0581d87c9c7f60725c2c5aa5a0e5f4e3be18ab72
-            pass: "123456"
-            access_string: "{{ _.credentials.authorization.basic.user }}:{{
-              _.credentials.authorization.basic.pass }}"
-          jwt:
-            email: root@localhost.com.br
-            pass: "123456"
+      basic_user: "{% prompt 'Basic User', 'Token do Usuário WebService (default:
+        casaferrari)',
+        '4694e702950c9d0e887b6a9e0581d87c9c7f60725c2c5aa5a0e5f4e3be18ab72',
+        'basic-user-token-1', false, true %}"
+      basic_pass: "{% prompt 'Basic User', 'Senha do Usuário WebService (default:
+        casaferrari)', '123456', 'basic-user-pass-1', false, true %}"
+      basic_access_string: "{{ _.basic_user }}:{{ _.basic_pass }}"
+      basic_token: "{% base64 'encode', 'normal', _.basic_access_string %}"
+      jwt_email: "{% prompt 'JWT User Email', 'Email do Usuário Administrativo para
+        JWT (default: casaferrari)', 'root@localhost.com.br',
+        'jwt-user-email-1', false, true %}"
+      jwt_pass: "{% prompt 'JWT User Pass', 'Senha do Usuário Administrativo para JWT
+        (default: casaferrari)', '123456', 'jwt-user-pass-1', false, true %}"
       headers:
         authorization:
           basic:
-            token: "{% base64 'encode', 'normal',
-              _.credentials.authorization.basic.access_string %}"
-            value: "Basic {{ _.headers.authorization.basic.token }} "
+            value: Basic {{ _.basic_token }}
           jwt:
             token: "{% response 'body', 'req_e7cffea57c904c24a1dd3b307e8959c0',
               'b64::JC5kYXRhLnRva2Vu::46b', 'no-history', 60 %}"
@@ -6337,23 +6401,16 @@ resources:
       PATH: "{{ _.BASE_PATH }}/{{ _.resource }}"
     dataPropertyOrder:
       "&":
-        - credentials
+        - basic_user
+        - basic_pass
+        - basic_access_string
+        - basic_token
+        - jwt_email
+        - jwt_pass
         - headers
         - requests
         - BASE_PATH
         - PATH
-      "&~|credentials":
-        - authorization
-      "&~|credentials~|authorization":
-        - basic
-        - jwt
-      "&~|credentials~|authorization~|basic":
-        - user
-        - pass
-        - access_string
-      "&~|credentials~|authorization~|jwt":
-        - email
-        - pass
       "&~|headers":
         - authorization
       "&~|headers~|authorization":
@@ -6362,7 +6419,6 @@ resources:
         - key
         - value
       "&~|headers~|authorization~|basic":
-        - token
         - value
       "&~|headers~|authorization~|jwt":
         - token
@@ -6443,7 +6499,7 @@ resources:
     _type: environment
   - _id: env_e64345c0b31745808a153e20abb60b65
     parentId: env_85e99734ad4246399a6755a906b143dc
-    modified: 1628794291381
+    modified: 1629218376905
     created: 1628515302561
     name: sprint
     data:
