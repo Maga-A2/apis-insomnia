@@ -1,8 +1,72 @@
 _type: export
 __export_format: 4
-__export_date: 2021-08-18T16:53:09.937Z
+__export_date: 2021-08-18T17:02:14.478Z
 __export_source: insomnia.desktop.app:v2021.4.1
 resources:
+  - _id: req_8959e079851a4826be863ee59ca3dc90
+    parentId: fld_e642dd8a20644c8c97818d9783850620
+    modified: 1629306110668
+    created: 1629306108910
+    url: "{{ _.BASE_PATH }}/enviouCliente"
+    name: Consultar Clientes Teste
+    description: |-
+      ## 🧔👧👵👦 Lista os clientes do ecommerce
+
+      # ***⚠ Pode retornar muitos dados, pois não possui filtros ⚠***
+
+      ### Exemplo do JSON de retorno:
+      ```json
+      {
+        "comprador": [
+          {
+            "nome": "Gabriel",
+            "email": "gabriel@gmail.com",
+            "tipo": "F",
+            "data_nascimento": "15/06/1990",
+            "sexo": "M",
+            "cidade": "Rio do Sul",
+            "estado": "SC",
+            "pais": "BR"
+          },
+        ]
+      }
+      ```
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - id: pair_a583df0d869248bdb2b02c027b18da68
+        name: "{{ _.headers.authorization.key }}"
+        value: "{{ _.headers.authorization.value }}"
+        description: ""
+    authentication: {}
+    metaSortKey: -1627929565154.8125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e642dd8a20644c8c97818d9783850620
+    parentId: wrk_38305c2ed92743afa8a958901d003bf5
+    modified: 1629306101898
+    created: 1629306101898
+    name: Teste
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1629306101898
+    _type: request_group
+  - _id: wrk_38305c2ed92743afa8a958901d003bf5
+    parentId: null
+    modified: 1628515302549
+    created: 1628515302549
+    name: APIs Magazord
+    description: ""
+    scope: collection
+    _type: workspace
   - _id: req_4e64adc404a74514a4f53a5c1b3af57e
     parentId: fld_789e6a04ca7d411ba21377811c9086d2
     modified: 1629215366015
@@ -72,14 +136,6 @@ resources:
         - VERSION
     metaSortKey: -1627927484117
     _type: request_group
-  - _id: wrk_38305c2ed92743afa8a958901d003bf5
-    parentId: null
-    modified: 1628515302549
-    created: 1628515302549
-    name: APIs Magazord
-    description: ""
-    scope: collection
-    _type: workspace
   - _id: req_6a7c968e61464e8f8bba945a146efced
     parentId: fld_153090e18371455c8caca045fa748534
     modified: 1629215349816
@@ -4429,6 +4485,7 @@ resources:
 
       1. Código opcional e até 32 caracteres;
         1. O Código deve ser único.
+
 
         
       2. Tipo 1 = TIPO_DESCONTO_VALOR | 2 = TIPO_DESCONTO_PERCENTUAL;
